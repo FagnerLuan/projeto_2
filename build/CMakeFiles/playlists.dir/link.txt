@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/playlists.dir/src/main.cpp.o CMakeFiles/playlists.dir/src/musica.cpp.o CMakeFiles/playlists.dir/src/playlist.cpp.o CMakeFiles/playlists.dir/src/funcoes.cpp.o -o playlists 

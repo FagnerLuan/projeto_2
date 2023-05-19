@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>simple song player: Código-Fonte de include/funcoes.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">simple song player<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">projeto 1 da disciplina de LP 1 do BTI.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhum resultado encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">funcoes.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="funcoes_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef FUNCOES_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define FUNCOES_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="lista_8h.html">lista.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="playlist_8h.html">playlist.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="musica_8h.html">musica.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#ac591a37bde791ab2c021fcc6cf10d268">cadastrarMusica</a>(<a class="code hl_class" href="classLista.html">Lista&lt;Musica&gt;</a> &amp;lista, <a class="code hl_class" href="classMusica.html">Musica</a> musica);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a05ad5fcf77fdaaa84812322e8f2e034f">excluirMusica</a>(<a class="code hl_class" href="classLista.html">Lista&lt;Musica&gt;</a> &amp;lista, <span class="keywordtype">int</span> indice, <a class="code hl_class" href="classLista.html">Lista&lt;Playlist*&gt;</a> &amp;playlists);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a4c2c262c17c4a4483c68e8621f9986e8">listarMusicas</a>(<a class="code hl_class" href="classLista.html">Lista&lt;Musica&gt;</a> &amp;lista);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a3b73b4628f16447367f33e773086e275">menuDoSistema</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a4c16cbba4f0d2de732f25e4df119999f">menuDasPlaylists</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a446667eacc98dbbb4e26b087e8fe0b5b">adicionarPlaylist</a>(<a class="code hl_class" href="classLista.html">Lista&lt;Playlist*&gt;</a> &amp;lista, <a class="code hl_class" href="classPlaylist.html">Playlist</a> *playlist);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a9b33dc414e92804b165de0582614f339">desalocarPlaylists</a>(<a class="code hl_class" href="classLista.html">Lista&lt;Playlist*&gt;</a> &amp;lista);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#ad7a8efcf260344759bd44ed09edc7b5a">removerPlaylist</a>(<a class="code hl_class" href="classLista.html">Lista&lt;Playlist*&gt;</a> &amp;lista, <span class="keywordtype">int</span> indice);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a487a6d6a4a08ef916663d1018c224393">listarPlaylists</a>(<a class="code hl_class" href="classLista.html">Lista&lt;Playlist*&gt;</a> &amp;lista);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a448ea325a00d25133673bbee48dcee08">adicionarMusicaNaPlaylist</a>(<a class="code hl_class" href="classPlaylist.html">Playlist</a> *playlist, <a class="code hl_class" href="classMusica.html">Musica</a> &amp;musica);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a47ac4b2226a3a5d68eade5955c89e2a6">removerMusicaDaPlaylist</a>(<a class="code hl_class" href="classLista.html">Lista&lt;Playlist*&gt;</a> &amp;lista, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a1347051431bc344fce4eb50ba16e817d">moverMusica</a>(<a class="code hl_class" href="classLista.html">Lista&lt;Playlist*&gt;</a> &amp;lista, <span class="keywordtype">int</span> origem, <span class="keywordtype">int</span> destino, <span class="keywordtype">int</span> indiceDaMusica);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keywordtype">void</span> <a class="code hl_function" href="funcoes_8h.html#a3124c42aef6b9344c42c820b53d564c6">reproduzirPlaylist</a>(<a class="code hl_class" href="classLista.html">Lista&lt;Playlist*&gt;</a> &amp;lista, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassLista_html"><div class="ttname"><a href="classLista.html">Lista</a></div><div class="ttdoc">Classe template que implementa uma lista encadeada.</div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00016">lista.h:16</a></div></div>
+<div class="ttc" id="aclassMusica_html"><div class="ttname"><a href="classMusica.html">Musica</a></div><div class="ttdoc">Classe que representa uma música.</div><div class="ttdef"><b>Definition:</b> <a href="musica_8h_source.html#l00012">musica.h:12</a></div></div>
+<div class="ttc" id="aclassPlaylist_html"><div class="ttname"><a href="classPlaylist.html">Playlist</a></div><div class="ttdoc">Uma classe que representa uma playlist.</div><div class="ttdef"><b>Definition:</b> <a href="playlist_8h_source.html#l00014">playlist.h:14</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a05ad5fcf77fdaaa84812322e8f2e034f"><div class="ttname"><a href="funcoes_8h.html#a05ad5fcf77fdaaa84812322e8f2e034f">excluirMusica</a></div><div class="ttdeci">void excluirMusica(Lista&lt; Musica &gt; &amp;lista, int indice, Lista&lt; Playlist * &gt; &amp;playlists)</div><div class="ttdoc">Auxilia na remoção de músicas do sistema.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00025">funcoes.cpp:25</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a1347051431bc344fce4eb50ba16e817d"><div class="ttname"><a href="funcoes_8h.html#a1347051431bc344fce4eb50ba16e817d">moverMusica</a></div><div class="ttdeci">void moverMusica(Lista&lt; Playlist * &gt; &amp;lista, int origem, int destino, int indiceDaMusica)</div><div class="ttdoc">função para auxiliar na operação de mover uma música de uma playlist para outra.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00132">funcoes.cpp:132</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a3124c42aef6b9344c42c820b53d564c6"><div class="ttname"><a href="funcoes_8h.html#a3124c42aef6b9344c42c820b53d564c6">reproduzirPlaylist</a></div><div class="ttdeci">void reproduzirPlaylist(Lista&lt; Playlist * &gt; &amp;lista, int index)</div><div class="ttdoc">Auxilia na reprodução de uma playlist.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00150">funcoes.cpp:150</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a3b73b4628f16447367f33e773086e275"><div class="ttname"><a href="funcoes_8h.html#a3b73b4628f16447367f33e773086e275">menuDoSistema</a></div><div class="ttdeci">void menuDoSistema()</div><div class="ttdoc">Função que exibe o primeiro menu, o menu do sistema, pro usuário.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00186">funcoes.cpp:186</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a446667eacc98dbbb4e26b087e8fe0b5b"><div class="ttname"><a href="funcoes_8h.html#a446667eacc98dbbb4e26b087e8fe0b5b">adicionarPlaylist</a></div><div class="ttdeci">void adicionarPlaylist(Lista&lt; Playlist * &gt; &amp;lista, Playlist *playlist)</div><div class="ttdoc">Auxilia no cadastro de playlists.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00077">funcoes.cpp:77</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a448ea325a00d25133673bbee48dcee08"><div class="ttname"><a href="funcoes_8h.html#a448ea325a00d25133673bbee48dcee08">adicionarMusicaNaPlaylist</a></div><div class="ttdeci">void adicionarMusicaNaPlaylist(Playlist *playlist, Musica &amp;musica)</div><div class="ttdoc">Auxilia na adição de músicas nas playlists.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00099">funcoes.cpp:99</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a47ac4b2226a3a5d68eade5955c89e2a6"><div class="ttname"><a href="funcoes_8h.html#a47ac4b2226a3a5d68eade5955c89e2a6">removerMusicaDaPlaylist</a></div><div class="ttdeci">void removerMusicaDaPlaylist(Lista&lt; Playlist * &gt; &amp;lista, int index)</div><div class="ttdoc">Auxilia na remoção de músicas das playlists.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00104">funcoes.cpp:104</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a487a6d6a4a08ef916663d1018c224393"><div class="ttname"><a href="funcoes_8h.html#a487a6d6a4a08ef916663d1018c224393">listarPlaylists</a></div><div class="ttdeci">void listarPlaylists(Lista&lt; Playlist * &gt; &amp;lista)</div><div class="ttdoc">Auxilia na listagem das playlists do usuário.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00087">funcoes.cpp:87</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a4c16cbba4f0d2de732f25e4df119999f"><div class="ttname"><a href="funcoes_8h.html#a4c16cbba4f0d2de732f25e4df119999f">menuDasPlaylists</a></div><div class="ttdeci">void menuDasPlaylists()</div><div class="ttdoc">Função que exibe o segundo menu, o menu de playlists, pro usuário.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00195">funcoes.cpp:195</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a4c2c262c17c4a4483c68e8621f9986e8"><div class="ttname"><a href="funcoes_8h.html#a4c2c262c17c4a4483c68e8621f9986e8">listarMusicas</a></div><div class="ttdeci">void listarMusicas(Lista&lt; Musica &gt; &amp;lista)</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00066">funcoes.cpp:66</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a9b33dc414e92804b165de0582614f339"><div class="ttname"><a href="funcoes_8h.html#a9b33dc414e92804b165de0582614f339">desalocarPlaylists</a></div><div class="ttdeci">void desalocarPlaylists(Lista&lt; Playlist * &gt; &amp;lista)</div><div class="ttdoc">Libera a memória alocada para as playlists.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00017">funcoes.cpp:17</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_ac591a37bde791ab2c021fcc6cf10d268"><div class="ttname"><a href="funcoes_8h.html#ac591a37bde791ab2c021fcc6cf10d268">cadastrarMusica</a></div><div class="ttdeci">void cadastrarMusica(Lista&lt; Musica &gt; &amp;lista, Musica musica)</div><div class="ttdoc">Auxilia no cadastro de músicas no sistema.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00004">funcoes.cpp:4</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_ad7a8efcf260344759bd44ed09edc7b5a"><div class="ttname"><a href="funcoes_8h.html#ad7a8efcf260344759bd44ed09edc7b5a">removerPlaylist</a></div><div class="ttdeci">void removerPlaylist(Lista&lt; Playlist * &gt; &amp;lista, int indice)</div><div class="ttdoc">Auxilia na remoção de playlists do sistema.</div><div class="ttdef"><b>Definition:</b> <a href="funcoes_8cpp_source.html#l00082">funcoes.cpp:82</a></div></div>
+<div class="ttc" id="alista_8h_html"><div class="ttname"><a href="lista_8h.html">lista.h</a></div></div>
+<div class="ttc" id="amusica_8h_html"><div class="ttname"><a href="musica_8h.html">musica.h</a></div></div>
+<div class="ttc" id="aplaylist_8h_html"><div class="ttname"><a href="playlist_8h.html">playlist.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

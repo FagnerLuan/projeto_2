@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>simple song player: Referência da Classe Playlist</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">simple song player<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">projeto 1 da disciplina de LP 1 do BTI.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhum resultado encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="classPlaylist-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle"><div class="title">Referência da Classe Playlist</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Uma classe que representa uma playlist.  
+ <a href="classPlaylist.html#details">Mais...</a></p>
+
+<p><code>#include &quot;<a class="el" href="playlist_8h_source.html">include/playlist.h</a>&quot;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:af66f530866f4371706f2fbd95147b82e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#af66f530866f4371706f2fbd95147b82e">Playlist</a> (std::string nome)</td></tr>
+<tr class="memdesc:af66f530866f4371706f2fbd95147b82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor que recebe o nome da playlist. Inicializa o campo nome com o parâmetro nome, *musicas com new <a class="el" href="classLista.html">Lista&lt;Musica&gt;()</a> e proximaMusica com 0.  <br /></td></tr>
+<tr class="separator:af66f530866f4371706f2fbd95147b82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef38d55e42995be147977726350f3ada"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#aef38d55e42995be147977726350f3ada">Playlist</a> ()</td></tr>
+<tr class="memdesc:aef38d55e42995be147977726350f3ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão que inicializa os campos com valores padrão. Inicializa nome com uma string "Sem nome", *musicas com new <a class="el" href="classLista.html">Lista&lt;Musica&gt;()</a> e proximaMusica com 0.  <br /></td></tr>
+<tr class="separator:aef38d55e42995be147977726350f3ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a18471b1bbc6b35712957f4f63846fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#a0a18471b1bbc6b35712957f4f63846fc">Playlist</a> (const <a class="el" href="classPlaylist.html">Playlist</a> &amp;outra)</td></tr>
+<tr class="memdesc:a0a18471b1bbc6b35712957f4f63846fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de cópia. Incializa os campos com os valores dos campos de outra.  <br /></td></tr>
+<tr class="separator:a0a18471b1bbc6b35712957f4f63846fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd9a69e347fc19a9a0787d7a7ce9df4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#aacd9a69e347fc19a9a0787d7a7ce9df4">~Playlist</a> ()</td></tr>
+<tr class="memdesc:aacd9a69e347fc19a9a0787d7a7ce9df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor. O destrutor libera a memória alocada para *musicas.  <br /></td></tr>
+<tr class="separator:aacd9a69e347fc19a9a0787d7a7ce9df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee971f901696a424cddbace5f7f55298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#aee971f901696a424cddbace5f7f55298">setNome</a> (std::string nome)</td></tr>
+<tr class="memdesc:aee971f901696a424cddbace5f7f55298"><td class="mdescLeft">&#160;</td><td class="mdescRight">função para setar o nome da playlist.  <br /></td></tr>
+<tr class="separator:aee971f901696a424cddbace5f7f55298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2628a904d245e341387dde543def0e89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#a2628a904d245e341387dde543def0e89">adicionarMusica</a> (<a class="el" href="classMusica.html">Musica</a> &amp;musica)</td></tr>
+<tr class="memdesc:a2628a904d245e341387dde543def0e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">função para adicionar uma música na playlist.  <br /></td></tr>
+<tr class="separator:a2628a904d245e341387dde543def0e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a3fb996d94b7c6dd44b3f7d184c87f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#a2a3fb996d94b7c6dd44b3f7d184c87f7">removerMusica</a> (int index)</td></tr>
+<tr class="memdesc:a2a3fb996d94b7c6dd44b3f7d184c87f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">função para remover uma música da playlist. Remove a música da playlist na posição desejada.  <br /></td></tr>
+<tr class="separator:a2a3fb996d94b7c6dd44b3f7d184c87f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac12cf69225efa52258322609d04989e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#aac12cf69225efa52258322609d04989e">busca</a> (int index)</td></tr>
+<tr class="memdesc:aac12cf69225efa52258322609d04989e"><td class="mdescLeft">&#160;</td><td class="mdescRight">função para buscar uma música na playlist.  <br /></td></tr>
+<tr class="separator:aac12cf69225efa52258322609d04989e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9afa13755e02b848bc5521af8121cbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNo.html">No</a>&lt; <a class="el" href="classMusica.html">Musica</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#ad9afa13755e02b848bc5521af8121cbf">proximaATocar</a> ()</td></tr>
+<tr class="memdesc:ad9afa13755e02b848bc5521af8121cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">função que retorna a próxima musica na playlist.  <br /></td></tr>
+<tr class="separator:ad9afa13755e02b848bc5521af8121cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa029639fa9b686d96ce3551176cfe3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#a2aa029639fa9b686d96ce3551176cfe3">mostrarMusicas</a> (int index)</td></tr>
+<tr class="memdesc:a2aa029639fa9b686d96ce3551176cfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">função para mostrar todas as músicas disponíveis na playlist. Essa função mostra todas as músicas disponíveis na playlist de forma recursiva.  <br /></td></tr>
+<tr class="separator:a2aa029639fa9b686d96ce3551176cfe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceea9c42ca9de4b9c1e9304ce2ed87a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classMusica.html">Musica</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#aceea9c42ca9de4b9c1e9304ce2ed87a8">getMusicas</a> ()</td></tr>
+<tr class="memdesc:aceea9c42ca9de4b9c1e9304ce2ed87a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">função que recupera a lista de musicas da playlist.  <br /></td></tr>
+<tr class="separator:aceea9c42ca9de4b9c1e9304ce2ed87a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac700059915a41bc5b4e380c9c6047fd4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#ac700059915a41bc5b4e380c9c6047fd4">getNome</a> () const</td></tr>
+<tr class="memdesc:ac700059915a41bc5b4e380c9c6047fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">função que recupera o nome da playlist.  <br /></td></tr>
+<tr class="separator:ac700059915a41bc5b4e380c9c6047fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef413f02e8ef19f98b7c4ef8c89b40e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlaylist.html#a8ef413f02e8ef19f98b7c4ef8c89b40e">listarMusicas</a> ()</td></tr>
+<tr class="memdesc:a8ef413f02e8ef19f98b7c4ef8c89b40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">função que lista todas as músicas na playlist. Essa função lista as músicas da playlist. Ela usa a função mostrarMusicas.  <br /></td></tr>
+<tr class="separator:a8ef413f02e8ef19f98b7c4ef8c89b40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Uma classe que representa uma playlist. </p>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8h_source.html#l00014">14</a> do arquivo <a class="el" href="playlist_8h_source.html">playlist.h</a>.</p>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="af66f530866f4371706f2fbd95147b82e" name="af66f530866f4371706f2fbd95147b82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af66f530866f4371706f2fbd95147b82e">&#9670;&#160;</a></span>Playlist() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Playlist::Playlist </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor que recebe o nome da playlist. Inicializa o campo nome com o parâmetro nome, *musicas com new <a class="el" href="classLista.html">Lista&lt;Musica&gt;()</a> e proximaMusica com 0. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome</td><td>O nome da playlist. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00004">4</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aef38d55e42995be147977726350f3ada" name="aef38d55e42995be147977726350f3ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef38d55e42995be147977726350f3ada">&#9670;&#160;</a></span>Playlist() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Playlist::Playlist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor padrão que inicializa os campos com valores padrão. Inicializa nome com uma string "Sem nome", *musicas com new <a class="el" href="classLista.html">Lista&lt;Musica&gt;()</a> e proximaMusica com 0. </p>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00016">16</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a18471b1bbc6b35712957f4f63846fc" name="a0a18471b1bbc6b35712957f4f63846fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a18471b1bbc6b35712957f4f63846fc">&#9670;&#160;</a></span>Playlist() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Playlist::Playlist </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPlaylist.html">Playlist</a> &amp;&#160;</td>
+          <td class="paramname"><em>outra</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor de cópia. Incializa os campos com os valores dos campos de outra. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outra</td><td>A outra playlist que será copiada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00010">10</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aacd9a69e347fc19a9a0787d7a7ce9df4" name="aacd9a69e347fc19a9a0787d7a7ce9df4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacd9a69e347fc19a9a0787d7a7ce9df4">&#9670;&#160;</a></span>~Playlist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Playlist::~Playlist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destrutor. O destrutor libera a memória alocada para *musicas. </p>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00022">22</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="a2628a904d245e341387dde543def0e89" name="a2628a904d245e341387dde543def0e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2628a904d245e341387dde543def0e89">&#9670;&#160;</a></span>adicionarMusica()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Playlist::adicionarMusica </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMusica.html">Musica</a> &amp;&#160;</td>
+          <td class="paramname"><em>musica</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>função para adicionar uma música na playlist. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">musica</td><td>a música a ser adicionada na playlist. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores Retornados</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00030">30</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aac12cf69225efa52258322609d04989e" name="aac12cf69225efa52258322609d04989e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac12cf69225efa52258322609d04989e">&#9670;&#160;</a></span>busca()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Playlist::busca </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>função para buscar uma música na playlist. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>O indice da música a se buscar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores Retornados</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>verdadeiro caso o indice seja válido, falso caso contrário. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00038">38</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aceea9c42ca9de4b9c1e9304ce2ed87a8" name="aceea9c42ca9de4b9c1e9304ce2ed87a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceea9c42ca9de4b9c1e9304ce2ed87a8">&#9670;&#160;</a></span>getMusicas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classMusica.html">Musica</a> &gt; * Playlist::getMusicas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>função que recupera a lista de musicas da playlist. </p>
+<dl class="retval"><dt>Valores Retornados</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Lista&lt;Musica&gt;*</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>A lista com as músicas da playlist. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00063">63</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac700059915a41bc5b4e380c9c6047fd4" name="ac700059915a41bc5b4e380c9c6047fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac700059915a41bc5b4e380c9c6047fd4">&#9670;&#160;</a></span>getNome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Playlist::getNome </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>função que recupera o nome da playlist. </p>
+<dl class="retval"><dt>Valores Retornados</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">std::string</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>O nome da playlist. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00067">67</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8ef413f02e8ef19f98b7c4ef8c89b40e" name="a8ef413f02e8ef19f98b7c4ef8c89b40e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef413f02e8ef19f98b7c4ef8c89b40e">&#9670;&#160;</a></span>listarMusicas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Playlist::listarMusicas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>função que lista todas as músicas na playlist. Essa função lista as músicas da playlist. Ela usa a função mostrarMusicas. </p>
+<dl class="retval"><dt>Valores Retornados</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00071">71</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2aa029639fa9b686d96ce3551176cfe3" name="a2aa029639fa9b686d96ce3551176cfe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aa029639fa9b686d96ce3551176cfe3">&#9670;&#160;</a></span>mostrarMusicas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Playlist::mostrarMusicas </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>função para mostrar todas as músicas disponíveis na playlist. Essa função mostra todas as músicas disponíveis na playlist de forma recursiva. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>O indice da música inicial. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores Retornados</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00055">55</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad9afa13755e02b848bc5521af8121cbf" name="ad9afa13755e02b848bc5521af8121cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9afa13755e02b848bc5521af8121cbf">&#9670;&#160;</a></span>proximaATocar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classNo.html">No</a>&lt; <a class="el" href="classMusica.html">Musica</a> &gt; * Playlist::proximaATocar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>função que retorna a próxima musica na playlist. </p>
+<dl class="retval"><dt>Valores Retornados</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">No&lt;Musica&gt;*</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>O nó com a proxima música na playlist, ou nullprt caso não haja mais músicas na playlist. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00046">46</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2a3fb996d94b7c6dd44b3f7d184c87f7" name="a2a3fb996d94b7c6dd44b3f7d184c87f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3fb996d94b7c6dd44b3f7d184c87f7">&#9670;&#160;</a></span>removerMusica()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Playlist::removerMusica </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>função para remover uma música da playlist. Remove a música da playlist na posição desejada. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>A posição da música a ser removida. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores Retornados</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00034">34</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aee971f901696a424cddbace5f7f55298" name="aee971f901696a424cddbace5f7f55298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee971f901696a424cddbace5f7f55298">&#9670;&#160;</a></span>setNome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Playlist::setNome </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>função para setar o nome da playlist. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome</td><td>O nome a ser atribuido para a playlist. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores Retornados</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="playlist_8cpp_source.html#l00026">26</a> do arquivo <a class="el" href="playlist_8cpp_source.html">playlist.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>include/<a class="el" href="playlist_8h_source.html">playlist.h</a></li>
+<li>src/<a class="el" href="playlist_8cpp_source.html">playlist.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
