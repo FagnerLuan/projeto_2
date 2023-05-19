@@ -14,17 +14,18 @@ void menu() {
     std::cout << "4 ---- Cadastrar Plalist" << std::endl;
     std::cout << "5 ---- Mostar Playlists Disponiveis" << std::endl;
     std::cout << "6 ---- Excluir uma Playlist" << std::endl;
-    std::cout << "7 ---- Adicionar musica em uma playlist" << std::endl;
+    std::cout << "7 ---- Adicionar musicas em uma playlist" << std::endl;
     std::cout << "8 ---- Listar as musicas de uma playlist" << std::endl;
     std::cout << "9 ---- Excluir musica de uma playlist" << std::endl;
     std::cout << "10 --- Mover musica na playlist" << std::endl;
     std::cout << "11 --- Reproduzir uma playlist" << std::endl;
 }
 
-int main() {
+int main(int argc, char* argv[]) {
     Driver driver;
     int opcao = -1;
     std::string input;
+    bool flag = (argc > 1) ? true : false;
 
     while (opcao != 0) {
         menu();
@@ -77,7 +78,7 @@ int main() {
             driver.excluirPlaylist();
             break;
         case 7:
-            driver.adicionarMusicaEmPlaylist();
+            driver.adicionarMusicaEmPlaylist(flag);
             break;
         case 8:
             driver.listarMusicasDaPlaylist();

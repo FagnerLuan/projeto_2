@@ -32,6 +32,16 @@ public:
     }
 
     /**
+     * @brief Construtor de cópia.
+     * @param lista A lista a ser copiada.
+    */
+    Lista(const Lista<T>& lista) {
+        for (int i = 0; i < lista.size(); i++) {
+            inserir(lista.get(i)->dado);
+        }
+    }
+
+    /**
      * @brief Destrutor
      * Libera a memória alocada para os Nós.
     */
@@ -48,10 +58,19 @@ public:
     /**
      * @brief função que recupera o primeiro elemento da lista.
      * @retval No<T>*
-     * @returns O primeiro elemento da lista.
+     * @return O primeiro elemento da lista.
     */
     No<T>* getCabeca() {
         return this->cabeca;
+    }
+
+    /**
+     * @brief Recupera o ultimo elemento da lista.
+     * @retval N<T>*
+     * @return O ultimo elemento da lista.
+    */
+    No<T>* getCauda() {
+        return this->cauda;
     }
 
     /**
@@ -71,6 +90,23 @@ public:
             cauda = novoNo;
         }
         tamanho++;
+    }
+
+    /**
+     * @brief Insere varios elementos na lista.
+     * @param elementos A lista de elementos a ser adicionada.
+     * @retval void
+    */
+    void adicionar(Lista<T>& elementos) {
+        if (estaVazia()) {
+            cabeca = elementos.getCabeca();
+            cauda = elementos.getCauda();
+        } else {
+            this->cauda->proximo = elementos.getCabeca();
+            this->cauda = elementos.getCauda();
+        }
+        
+        tamanho += elementos.size();
     }
 
     /**
@@ -136,6 +172,25 @@ public:
         noAtual->proximo = temp->proximo;
         delete temp;
         tamanho--;
+
+        if (index == tamanho - 1) {
+            cauda = noAtual;
+        }
+    }
+
+    /**
+     * @brief Remove vários elementos da lista.
+     * @param elementos A lista de elementos a ser removida.
+     * @retval void
+    */
+    void remover(Lista<T> &elementos) {
+        for (int i = 0; i < elementos.size(); i++) {
+            T elemento = elementos.get(i)->dado;
+            int indice = busca(elemento);
+            if (indice != -1) {
+                remover(indice)
+            }
+        }
     }
 
 
@@ -156,6 +211,22 @@ public:
         }
 
         return true;
+    }
+
+    /**
+     * @brief Faz uma busca pelo elemento na lista.
+     * @param elemento O elemento a ser buscado
+     * @retval int
+     * @return O indice do elemento na lista caso exista, -1 caso contrário.
+    */
+    int busca(T elemento) {
+        for (int i = 0; i < tamanho; i++) {
+            if (get(i)->dado == elemento) {
+                return i;
+            }
+        }
+
+        return -1;
     }
 
     /**
@@ -194,6 +265,57 @@ public:
     */
     int size() const {
         return this->tamanho;
+    }
+
+    /**
+     * @brief Sobrecarga do operedor +.
+     * Faz a concatenação de duas listas.
+     * @param outra A outra lista a ser concatenada.
+     * @retval Lista<T>
+     * @return Uma nova lista criada a partir das duas primeiras.
+    */
+    Lista<T>& operator +(const Lista<T>& outra) {
+        Lista<T> result;
+        result.adicionar(*this);
+        result.adicionar(outra);
+
+        return result;
+    }
+
+    /**
+     * @brief Extrai o último elemento da lista.
+     * @param no O no que vai receber o elemento.
+     * @retval void
+    */
+    void operator >>(No<T> *no) {
+        if (estaVazia()) {
+            no = nullptr;
+        } else {
+            T elemento = get(tamanho - 1)->dado;
+            no->dado = elemento;
+            remover(tamanho - 1);
+        }
+    }
+
+    /**
+     * @brief Insere um elemento no fim da lista.
+     * @param elemento O elemento a ser inserido.
+     * @retval void
+    */
+    void operator <<(No<T> *elemento) {
+        if (elemento == nullptr) {
+            return;
+        }
+
+        if (cabeca == nullptr) {
+            cabeca = elemento;
+            cauda = elemento;
+        } else {
+            cauda->proximo = elemento;
+            cauda = elemento;
+        }
+
+        tamanho++;
     }
 
 };

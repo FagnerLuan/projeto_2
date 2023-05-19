@@ -134,7 +134,7 @@ void Driver::excluirPlaylist() {
     playlists.remover(indice);
 }
 
-void Driver::adicionarMusicaEmPlaylist() {
+void Driver::adicionaUma() {
     if (sistema.estaVazia()) {
         std::cout << "Nenhuma musica disponivel no sistema!" << std::endl;
         return;
@@ -175,6 +175,56 @@ void Driver::adicionarMusicaEmPlaylist() {
     Musica novaMusica(musica.getTitulo(), musica.getArtista());
     play->adicionarMusica(novaMusica);
     std::cout << "Musica adicionada com sucesso!" << std::endl;
+}
+
+void Driver::adicionaVarias() {
+    if (sistema.estaVazia()) {
+        std::cout << "Nenhuma musica disponivel no sistema!" << std::endl;
+        return;
+    }
+
+    if (playlists.estaVazia()) {
+        std::cout << "Nenhuma Playlist Disponivel!" << std::endl;
+        return;
+    }
+
+    mostrarPlaylists();
+    std::cout << "Escolha a primeira Playlist pelo indice: ";
+    std::string input;
+    std::getline(std::cin, input);
+    int indicePlaylist1 = std::stoi(input);
+
+    if (indicePlaylist1 < 0 || indicePlaylist1 >= playlists.size()) {
+        std::cout << "Indice Invalido!" << std::endl;
+        std::cout << "Operação nao concluida!" << std::endl;
+        return;
+    }
+
+    mostrarPlaylists();
+    std::cout << "Escolha a segunda Playlist pelo indice: ";
+    std::string input;
+    std::getline(std::cin, input);
+    int indicePlaylist2 = std::stoi(input);
+
+    if (indicePlaylist2 < 0 || indicePlaylist2 >= playlists.size()) {
+        std::cout << "Indice Invalido!" << std::endl;
+        std::cout << "Operação nao concluida!" << std::endl;
+        return;
+    }
+
+    if (indicePlaylist1 == indicePlaylist2) {
+        return;
+    }
+
+    Playlist *playlist1 = playlists.get(indicePlaylist1)->dado;
+    Playlist *playlist2 = playlists.get(indicePlaylist2)->dado;
+
+    // TODO: Terminar de implementar
+
+}
+
+void Driver::adicionarMusicaEmPlaylist(bool flag) {
+    
 }
 
 void Driver::listarMusicasDaPlaylist() {

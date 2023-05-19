@@ -98,7 +98,19 @@ public:
      * @brief Adiciona uma musica em uma playlist.
      * @retval void
     */
-    void adicionarMusicaEmPlaylist();
+    void adicionarMusicaEmPlaylist(bool flag);
+
+    /**
+     * @brief Adiciona uma musica em uma playlist.
+     * @retval void
+    */
+    void adicionaUma();
+
+    /**
+     * @brief Adiciona várias musicas em uma playlist.
+     * @retval void
+    */
+    void adicionaVarias();
 
     /**
      * @brief Lista toas as musicas de uma Playlist.
