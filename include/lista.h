@@ -35,7 +35,11 @@ public:
      * @brief Construtor de cópia.
      * @param lista A lista a ser copiada.
     */
-    Lista(const Lista<T>& lista) {
+    Lista(Lista<T>& lista) {
+        this->cabeca = nullptr;
+        this->cauda = nullptr;
+        this->tamanho = lista.tamanho;
+
         for (int i = 0; i < lista.size(); i++) {
             inserir(lista.get(i)->dado);
         }
@@ -81,6 +85,10 @@ public:
     */
     void inserir(const T& elemento) {
         No<T>* novoNo = new No<T>(elemento);
+
+        if (busca(elemento) != -1) {
+            return;
+        }
 
         if (cabeca == nullptr) {
             cabeca = novoNo;
@@ -148,7 +156,7 @@ public:
             return;
         }
 
-        // Caso queir remover o primeiro elemento.
+        // Caso queira remover o primeiro elemento.
         if (index == 0) {
             No<T>* noAtual = cabeca;
             cabeca = cabeca->proximo;
@@ -181,16 +189,21 @@ public:
     /**
      * @brief Remove vários elementos da lista.
      * @param elementos A lista de elementos a ser removida.
-     * @retval void
+     * @retval int
+     * @return O número de elementos remvidos.
     */
-    void remover(Lista<T> &elementos) {
+    int remover(Lista<T> &elementos) {
+        int removidos = 0;
         for (int i = 0; i < elementos.size(); i++) {
             T elemento = elementos.get(i)->dado;
             int indice = busca(elemento);
             if (indice != -1) {
-                remover(indice)
+                removidos++;
+                remover(indice);
             }
         }
+
+        return removidos;
     }
 
 

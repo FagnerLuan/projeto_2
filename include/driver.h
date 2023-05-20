@@ -14,7 +14,7 @@
 class Driver {
 private:
     Lista<Musica> sistema; /**< as musicas do sistema*/
-    Lista<Playlist*> playlists; /**< as playlists do usuário*/
+    Lista<Playlist> playlists; /**< as playlists do usuário*/
 
 public:
     /**
@@ -73,14 +73,14 @@ public:
      * @retval int
      * @return O indice da playlist caso a playlist exista, -1 caso contrário.
     */
-    int buscaPlaylist(Playlist *playlist);
+    int buscaPlaylist(Playlist& playlist);
 
     /**
      * @brief Cadastra uma Playlist no sistema.
      * @param playlist A playlist a ser adicionada no sistema.
      * @retval void
     */
-    void cadastrarPlaylist(Playlist *playlist);
+    void cadastrarPlaylist(Playlist &playlist);
 
     /**
      * @brief Mostra as Playlists disponíveis.

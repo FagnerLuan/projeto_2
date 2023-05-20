@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/luan/atividades/projeto_1/include
+CXX_INCLUDES = -I/home/luan/atividades/projeto_2/include
 
-CXX_FLAGS = -O3 -DNDEBUG
+CXX_FLAGS = 
 

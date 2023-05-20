@@ -15,7 +15,7 @@
 class Playlist {
 private:
     std::string nome; /**< O nome da Playlist */
-    Lista<Musica> *musicas; /**< Uma lista com as músicas da playlist */
+    Lista<Musica> musicas; /**< Uma lista com as músicas da playlist */
     int proximaMusica; /**< A próxima música a ser reproduzida */
 
 public:
@@ -57,7 +57,14 @@ public:
      * @param musica a música a ser adicionada na playlist.
      * @retval void
     */
-    void adicionarMusica(Musica& musica);
+    void adicionar(Musica& musica);
+
+    /**
+    * @brief Adiciona várias músicas em uma playlist.
+    * @param playlist A playlist com as músicas a ser adicionada.
+    * @retval void
+   */
+    void adicionar(Playlist& playlist);
 
     /**
      * @brief Adiciona uma musica na playlist na posicao desejada.
@@ -73,7 +80,15 @@ public:
      * @param index A posição da música a ser removida.
      * @retval void
     */
-    void removerMusica(int index);
+    void remover(int index);
+
+    /**
+     * @brief Remove várias músicas de uma playlist.
+     * @param playlist A playlist com as musicas a serem removidas.
+     * @retval int
+     * @return O número de elementos remmovidos da playlist.
+    */
+    int remover(Playlist& playlist);
 
     /**
      * @brief função para buscar uma música na playlist.
@@ -82,6 +97,14 @@ public:
      * @return verdadeiro caso o indice seja válido, falso caso contrário.
     */
     bool busca(int index);
+
+    /**
+     * @brief Faz uma busca por uma música na playlist.
+     * @param musica A música buscada.
+     * @retval bool
+     * @return true caso a musica se encontre na playlist, false caso contrario.
+    */
+    bool busca(const Musica &musica);
 
     /**
      * @brief função que retorna a próxima musica na playlist.
@@ -103,7 +126,7 @@ public:
      * @retval Lista<Musica>*
      * @return A lista com as músicas da playlist.
     */
-    Lista<Musica> *getMusicas();
+    Lista<Musica> getMusicas();
 
     /**
      * @brief função que recupera o nome da playlist.
@@ -132,7 +155,53 @@ public:
     * @retval std::ostream
     * @return O stream de saída com as informações.
    */
-   friend std::ostream& operator<<(std::ostream& saida, Playlist* playlist);
+   friend std::ostream& operator<<(std::ostream& saida, Playlist& playlist);
+
+   /**
+    * @brief Sobrecarga do operador + para realizar a união entre duas playlists.
+    * @param outra A segunda playlist da união.
+    * @retval Playlist
+    * @return Uma nova playlist a partir da união das duas primeiras.
+   */
+    Playlist operator +(Playlist &outra);
+
+    /**
+    * @brief Sobrecarga do operador + para adicionar uma música no final da playlist.
+    * @param musica A música a ser adicionada.
+    * @retval Playlist
+    * @return Uma nova playlist com a nova música no final.
+   */
+    Playlist operator +(Musica &musica);
+
+    /**
+     * @brief Sobrecarga do operador - para realizar a diferença entre duas playlists.
+     * @param outra A segunda playlist da operação.
+     * @retval Playlist
+     * @return Uma nova playlist resultante da operação.
+    */
+    Playlist operator -(Playlist &outra);
+
+    /**
+     * @brief Sobrecarga do operador - para remover uma música da playlist.
+     * @param musica A música a ser removida.
+     * @retval Playlist
+     * @return Uma nova playlist sem a música removida.
+    */
+    Playlist operator -(Musica &musica);
+
+    /**
+     * @brief Sobrecarga do operador >> para extrair a última música da playlist.
+     * @param musica O que receberá a música extraida.
+     * @retval void
+    */
+    void operator >>(No<Musica> *musica);
+
+    /**
+     * @brief Sobrecarga do operador << para adicionar uma música no fim da playlist.
+     * @param musica O no com a música a ser adicionada.
+     * @retval void
+    */
+    void operator <<(No<Musica> *musica);
 };
 
 #endif

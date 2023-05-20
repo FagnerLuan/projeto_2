@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/luan/atividades/projeto_1/src/driver.cpp" "CMakeFiles/simple_song_player.dir/src/driver.cpp.o" "gcc" "CMakeFiles/simple_song_player.dir/src/driver.cpp.o.d"
-  "/home/luan/atividades/projeto_1/src/main.cpp" "CMakeFiles/simple_song_player.dir/src/main.cpp.o" "gcc" "CMakeFiles/simple_song_player.dir/src/main.cpp.o.d"
-  "/home/luan/atividades/projeto_1/src/musica.cpp" "CMakeFiles/simple_song_player.dir/src/musica.cpp.o" "gcc" "CMakeFiles/simple_song_player.dir/src/musica.cpp.o.d"
-  "/home/luan/atividades/projeto_1/src/playlist.cpp" "CMakeFiles/simple_song_player.dir/src/playlist.cpp.o" "gcc" "CMakeFiles/simple_song_player.dir/src/playlist.cpp.o.d"
+  "/home/luan/atividades/projeto_2/src/driver.cpp" "CMakeFiles/simple_song_player.dir/src/driver.cpp.o" "gcc" "CMakeFiles/simple_song_player.dir/src/driver.cpp.o.d"
+  "/home/luan/atividades/projeto_2/src/main.cpp" "CMakeFiles/simple_song_player.dir/src/main.cpp.o" "gcc" "CMakeFiles/simple_song_player.dir/src/main.cpp.o.d"
+  "/home/luan/atividades/projeto_2/src/musica.cpp" "CMakeFiles/simple_song_player.dir/src/musica.cpp.o" "gcc" "CMakeFiles/simple_song_player.dir/src/musica.cpp.o.d"
+  "/home/luan/atividades/projeto_2/src/playlist.cpp" "CMakeFiles/simple_song_player.dir/src/playlist.cpp.o" "gcc" "CMakeFiles/simple_song_player.dir/src/playlist.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

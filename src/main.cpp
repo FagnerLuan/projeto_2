@@ -67,7 +67,7 @@ int main(int argc, char* argv[]) {
                 std::string nome;
                 std::cout << "Nome da Playlist: ";
                 std::getline(std::cin, nome);
-                Playlist* playlist = new Playlist(nome);
+                Playlist playlist = Playlist(nome);
                 driver.cadastrarPlaylist(playlist);
             }
             break;

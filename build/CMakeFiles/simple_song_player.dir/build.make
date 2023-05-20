@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/luan/atividades/projeto_1
+CMAKE_SOURCE_DIR = /home/luan/atividades/projeto_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luan/atividades/projeto_1/build
+CMAKE_BINARY_DIR = /home/luan/atividades/projeto_2/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/simple_song_player.dir/depend.make
@@ -70,60 +70,60 @@ include CMakeFiles/simple_song_player.dir/progress.make
 include CMakeFiles/simple_song_player.dir/flags.make
 
 CMakeFiles/simple_song_player.dir/src/main.cpp.o: CMakeFiles/simple_song_player.dir/flags.make
-CMakeFiles/simple_song_player.dir/src/main.cpp.o: /home/luan/atividades/projeto_1/src/main.cpp
+CMakeFiles/simple_song_player.dir/src/main.cpp.o: /home/luan/atividades/projeto_2/src/main.cpp
 CMakeFiles/simple_song_player.dir/src/main.cpp.o: CMakeFiles/simple_song_player.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luan/atividades/projeto_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simple_song_player.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simple_song_player.dir/src/main.cpp.o -MF CMakeFiles/simple_song_player.dir/src/main.cpp.o.d -o CMakeFiles/simple_song_player.dir/src/main.cpp.o -c /home/luan/atividades/projeto_1/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luan/atividades/projeto_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simple_song_player.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simple_song_player.dir/src/main.cpp.o -MF CMakeFiles/simple_song_player.dir/src/main.cpp.o.d -o CMakeFiles/simple_song_player.dir/src/main.cpp.o -c /home/luan/atividades/projeto_2/src/main.cpp
 
 CMakeFiles/simple_song_player.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_song_player.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luan/atividades/projeto_1/src/main.cpp > CMakeFiles/simple_song_player.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luan/atividades/projeto_2/src/main.cpp > CMakeFiles/simple_song_player.dir/src/main.cpp.i
 
 CMakeFiles/simple_song_player.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_song_player.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luan/atividades/projeto_1/src/main.cpp -o CMakeFiles/simple_song_player.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luan/atividades/projeto_2/src/main.cpp -o CMakeFiles/simple_song_player.dir/src/main.cpp.s
 
 CMakeFiles/simple_song_player.dir/src/musica.cpp.o: CMakeFiles/simple_song_player.dir/flags.make
-CMakeFiles/simple_song_player.dir/src/musica.cpp.o: /home/luan/atividades/projeto_1/src/musica.cpp
+CMakeFiles/simple_song_player.dir/src/musica.cpp.o: /home/luan/atividades/projeto_2/src/musica.cpp
 CMakeFiles/simple_song_player.dir/src/musica.cpp.o: CMakeFiles/simple_song_player.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luan/atividades/projeto_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simple_song_player.dir/src/musica.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simple_song_player.dir/src/musica.cpp.o -MF CMakeFiles/simple_song_player.dir/src/musica.cpp.o.d -o CMakeFiles/simple_song_player.dir/src/musica.cpp.o -c /home/luan/atividades/projeto_1/src/musica.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luan/atividades/projeto_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simple_song_player.dir/src/musica.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simple_song_player.dir/src/musica.cpp.o -MF CMakeFiles/simple_song_player.dir/src/musica.cpp.o.d -o CMakeFiles/simple_song_player.dir/src/musica.cpp.o -c /home/luan/atividades/projeto_2/src/musica.cpp
 
 CMakeFiles/simple_song_player.dir/src/musica.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_song_player.dir/src/musica.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luan/atividades/projeto_1/src/musica.cpp > CMakeFiles/simple_song_player.dir/src/musica.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luan/atividades/projeto_2/src/musica.cpp > CMakeFiles/simple_song_player.dir/src/musica.cpp.i
 
 CMakeFiles/simple_song_player.dir/src/musica.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_song_player.dir/src/musica.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luan/atividades/projeto_1/src/musica.cpp -o CMakeFiles/simple_song_player.dir/src/musica.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luan/atividades/projeto_2/src/musica.cpp -o CMakeFiles/simple_song_player.dir/src/musica.cpp.s
 
 CMakeFiles/simple_song_player.dir/src/playlist.cpp.o: CMakeFiles/simple_song_player.dir/flags.make
-CMakeFiles/simple_song_player.dir/src/playlist.cpp.o: /home/luan/atividades/projeto_1/src/playlist.cpp
+CMakeFiles/simple_song_player.dir/src/playlist.cpp.o: /home/luan/atividades/projeto_2/src/playlist.cpp
 CMakeFiles/simple_song_player.dir/src/playlist.cpp.o: CMakeFiles/simple_song_player.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luan/atividades/projeto_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simple_song_player.dir/src/playlist.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simple_song_player.dir/src/playlist.cpp.o -MF CMakeFiles/simple_song_player.dir/src/playlist.cpp.o.d -o CMakeFiles/simple_song_player.dir/src/playlist.cpp.o -c /home/luan/atividades/projeto_1/src/playlist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luan/atividades/projeto_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simple_song_player.dir/src/playlist.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simple_song_player.dir/src/playlist.cpp.o -MF CMakeFiles/simple_song_player.dir/src/playlist.cpp.o.d -o CMakeFiles/simple_song_player.dir/src/playlist.cpp.o -c /home/luan/atividades/projeto_2/src/playlist.cpp
 
 CMakeFiles/simple_song_player.dir/src/playlist.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_song_player.dir/src/playlist.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luan/atividades/projeto_1/src/playlist.cpp > CMakeFiles/simple_song_player.dir/src/playlist.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luan/atividades/projeto_2/src/playlist.cpp > CMakeFiles/simple_song_player.dir/src/playlist.cpp.i
 
 CMakeFiles/simple_song_player.dir/src/playlist.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_song_player.dir/src/playlist.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luan/atividades/projeto_1/src/playlist.cpp -o CMakeFiles/simple_song_player.dir/src/playlist.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luan/atividades/projeto_2/src/playlist.cpp -o CMakeFiles/simple_song_player.dir/src/playlist.cpp.s
 
 CMakeFiles/simple_song_player.dir/src/driver.cpp.o: CMakeFiles/simple_song_player.dir/flags.make
-CMakeFiles/simple_song_player.dir/src/driver.cpp.o: /home/luan/atividades/projeto_1/src/driver.cpp
+CMakeFiles/simple_song_player.dir/src/driver.cpp.o: /home/luan/atividades/projeto_2/src/driver.cpp
 CMakeFiles/simple_song_player.dir/src/driver.cpp.o: CMakeFiles/simple_song_player.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luan/atividades/projeto_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simple_song_player.dir/src/driver.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simple_song_player.dir/src/driver.cpp.o -MF CMakeFiles/simple_song_player.dir/src/driver.cpp.o.d -o CMakeFiles/simple_song_player.dir/src/driver.cpp.o -c /home/luan/atividades/projeto_1/src/driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luan/atividades/projeto_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simple_song_player.dir/src/driver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simple_song_player.dir/src/driver.cpp.o -MF CMakeFiles/simple_song_player.dir/src/driver.cpp.o.d -o CMakeFiles/simple_song_player.dir/src/driver.cpp.o -c /home/luan/atividades/projeto_2/src/driver.cpp
 
 CMakeFiles/simple_song_player.dir/src/driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_song_player.dir/src/driver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luan/atividades/projeto_1/src/driver.cpp > CMakeFiles/simple_song_player.dir/src/driver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luan/atividades/projeto_2/src/driver.cpp > CMakeFiles/simple_song_player.dir/src/driver.cpp.i
 
 CMakeFiles/simple_song_player.dir/src/driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_song_player.dir/src/driver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luan/atividades/projeto_1/src/driver.cpp -o CMakeFiles/simple_song_player.dir/src/driver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luan/atividades/projeto_2/src/driver.cpp -o CMakeFiles/simple_song_player.dir/src/driver.cpp.s
 
 # Object files for target simple_song_player
 simple_song_player_OBJECTS = \
@@ -141,7 +141,7 @@ simple_song_player: CMakeFiles/simple_song_player.dir/src/playlist.cpp.o
 simple_song_player: CMakeFiles/simple_song_player.dir/src/driver.cpp.o
 simple_song_player: CMakeFiles/simple_song_player.dir/build.make
 simple_song_player: CMakeFiles/simple_song_player.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luan/atividades/projeto_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable simple_song_player"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luan/atividades/projeto_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable simple_song_player"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simple_song_player.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/simple_song_player.dir/clean:
 .PHONY : CMakeFiles/simple_song_player.dir/clean
 
 CMakeFiles/simple_song_player.dir/depend:
-	cd /home/luan/atividades/projeto_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luan/atividades/projeto_1 /home/luan/atividades/projeto_1 /home/luan/atividades/projeto_1/build /home/luan/atividades/projeto_1/build /home/luan/atividades/projeto_1/build/CMakeFiles/simple_song_player.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luan/atividades/projeto_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luan/atividades/projeto_2 /home/luan/atividades/projeto_2 /home/luan/atividades/projeto_2/build /home/luan/atividades/projeto_2/build /home/luan/atividades/projeto_2/build/CMakeFiles/simple_song_player.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/simple_song_player.dir/depend
 
