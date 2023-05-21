@@ -136,5 +136,24 @@ public:
      * @retval void
     */
     void reproduzirPlaylist();
+
+private:
+    /**
+     * @brief Conta a quantidade de vezes que um caracter aparece em uma string.
+     * @param texto O texto onde procuramos o caracter.
+     * @param c O caracter procurado.
+     * @retval int
+     * @return O número de vezes que o caracter aparece no texto.
+    */
+    int count_char(std::string texto, char c);
+
+    /**
+     * @brief Separa uma string em varias a partir de um separador.
+     * @param texto O texto a ser quebrado.
+     * @param sep O caracter separador.
+     * @retval Lista<std::string>
+     * @return Uma lista com os textos separados.
+    */
+    Lista<std::string> split(std::string texto, char sep);
 };
 #endif

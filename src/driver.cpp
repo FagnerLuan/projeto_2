@@ -393,3 +393,55 @@ void Driver::reproduzirPlaylist() {
 
     std::cout << "Fim da playlist!" << std::endl;
 }
+
+int Driver::count_char(std::string texto, char c) {
+    int count = 0;
+    for (int i = 0; i < texto.length(); i++) {
+        if (texto[i] == c) {
+            count++;
+        }
+    }
+    
+    return count;
+}
+
+Lista<std::string> Driver::split(std::string texto, char sep) {
+    Lista<std::string> result = Lista<std::string>();
+    std::string novoTexto = texto;
+
+    if (novoTexto[0] == sep || novoTexto[novoTexto.length() - 1] == sep) {
+        novoTexto = novoTexto.substr(1, novoTexto.length());
+    }
+
+    int times = count_char(texto, sep);
+
+    if (times == 0) {
+        result.inserir(novoTexto);
+    } else if (times == 1) {
+        for (int i = 0; i < novoTexto.length(); i++) {
+            if (novoTexto[i] == sep) {
+                std::string sub1 = novoTexto.substr(0, i);
+                std::string sub2 = novoTexto.substr(i + 1, novoTexto.length());
+                result.inserir(sub1);
+                result.inserir(sub2);
+            }
+        }
+    } else {
+        int start = 0;
+        int s_count = 0;
+        int counter = 0;
+        while (s_count < times) {
+            if (novoTexto[counter] == sep) {
+                std::string sub = novoTexto.substr(start, counter);
+                result.inserir(sub);
+                start = counter + 1;
+                novoTexto = novoTexto.substr(start, novoTexto.length());
+                s_count++;
+            }
+            counter++;
+        }
+        result.inserir(novoTexto);
+    }
+
+    return result;
+}
