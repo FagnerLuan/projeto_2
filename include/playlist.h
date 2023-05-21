@@ -15,7 +15,7 @@
 class Playlist {
 private:
     std::string nome; /**< O nome da Playlist */
-    Lista<Musica> musicas; /**< Uma lista com as músicas da playlist */
+    Lista<Musica> *musicas; /**< Uma lista com as músicas da playlist */
     int proximaMusica; /**< A próxima música a ser reproduzida */
 
 public:
@@ -37,7 +37,7 @@ public:
      * Incializa os campos com os valores dos campos de outra.
      * @param outra A outra playlist que será copiada.
     */
-    Playlist(const Playlist& outra);
+    Playlist(Playlist& outra);
 
     /**
      * @brief Destrutor.
@@ -57,7 +57,7 @@ public:
      * @param musica a música a ser adicionada na playlist.
      * @retval void
     */
-    void adicionar(Musica& musica);
+    void adicionar(Musica &musica);
 
     /**
     * @brief Adiciona várias músicas em uma playlist.
@@ -72,7 +72,7 @@ public:
      * @param posicao A posicao a adicionar a música.
      * @retval void
     */
-    void adicionarMusicaNaPosicao(Musica& musica, int posicao);
+    void adicionarMusicaNaPosicao(Musica &musica, int posicao);
 
     /**
      * @brief função para remover uma música da playlist.
@@ -104,7 +104,7 @@ public:
      * @retval bool
      * @return true caso a musica se encontre na playlist, false caso contrario.
     */
-    bool busca(const Musica &musica);
+    bool busca(Musica &musica);
 
     /**
      * @brief função que retorna a próxima musica na playlist.
@@ -126,7 +126,7 @@ public:
      * @retval Lista<Musica>*
      * @return A lista com as músicas da playlist.
     */
-    Lista<Musica> getMusicas();
+    Lista<Musica>* getMusicas();
 
     /**
      * @brief função que recupera o nome da playlist.

@@ -14,7 +14,7 @@
 class Driver {
 private:
     Lista<Musica> sistema; /**< as musicas do sistema*/
-    Lista<Playlist> playlists; /**< as playlists do usuário*/
+    Lista<Playlist*> playlists; /**< as playlists do usuário*/
 
 public:
     /**
@@ -33,7 +33,7 @@ public:
      * @param musica A musica a ser cadastrada no sistema.
      * @retval void
     */
-    void cadastrarMusica(const Musica musica);
+    void cadastrarMusica(Musica &musica);
 
     /**
      * @brief Remove uma música do sistema através de um índice.
@@ -50,22 +50,22 @@ public:
 
     /**
      * @brief Faz uma busca nas musicas e retorna o indice da musica na lista.
-     * @param musica A musica a buscar no sistema.
+     * @param musica A musica a ser buscada.
      * @param musicas A lista com as músicas.
      * @retval int
      * @return O indice da musica caso estja no sistema, -1 caso a musica não esteja no sistema.
     */
-    int buscaMusica(const Musica musica, Lista<Musica>& musicas);
+    int buscaMusica(const Musica &musica, Lista<Musica>& musicas);
 
     /**
      * @brief Faz uma busca nas musicas e retorna o indice da musica na lista.
      * Versão sobrecarregada de buscaMusica.
-     * @param musica A musica a buscar no sistema.
+     * @param musica A musica a ser buscada.
      * @param musicas A lista com as musicas.
      * @retval int
      * @return O indice da musica caso estja no sistema, -1 caso a musica não esteja no sistema.
     */
-    int buscaMusica(const Musica musica, Lista<Musica> *musicas);
+    int buscaMusica(const Musica &musica, Lista<Musica> *musicas);
 
     /**
      * @brief faz uma busca nas playlists e retorna o indice da playlist.
@@ -73,14 +73,14 @@ public:
      * @retval int
      * @return O indice da playlist caso a playlist exista, -1 caso contrário.
     */
-    int buscaPlaylist(Playlist& playlist);
+    int buscaPlaylist(Playlist *playlist);
 
     /**
      * @brief Cadastra uma Playlist no sistema.
      * @param playlist A playlist a ser adicionada no sistema.
      * @retval void
     */
-    void cadastrarPlaylist(Playlist &playlist);
+    void cadastrarPlaylist(Playlist *playlist);
 
     /**
      * @brief Mostra as Playlists disponíveis.

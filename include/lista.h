@@ -83,7 +83,7 @@ public:
      * @param elemento O elemento a ser inserido na lista.
      * @retval void
     */
-    void inserir(const T& elemento) {
+    void inserir(T& elemento) {
         No<T>* novoNo = new No<T>(elemento);
 
         if (busca(elemento) != -1) {

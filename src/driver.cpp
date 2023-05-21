@@ -2,19 +2,20 @@
 #include "driver.h"
 
 Driver::Driver() {
-    playlists = Lista<Playlist>();
+    sistema = Lista<Musica>();
+    playlists = Lista<Playlist*>();
 }
 
 Driver::~Driver() {
-    /*No<Playlist> *noAtual = playlists.getCabeca();
+    No<Playlist*> *noAtual = playlists.getCabeca();
     while (noAtual != nullptr) {
-        No<Playlist> *proximo = noAtual->proximo;
+        No<Playlist*> *proximo = noAtual->proximo;
         delete noAtual->dado;
         noAtual = proximo;
-    }*/
+    }
 }
 
-void Driver::cadastrarMusica(const Musica musica) {
+void Driver::cadastrarMusica(Musica& musica) {
     if (buscaMusica(musica, sistema) != -1) {
         std::cout << "Esta musica ja se encontra no sistema!" << std::endl;
     } else {
@@ -37,11 +38,11 @@ void Driver::removerDoSistema(int indice) {
     Musica musica = sistema.get(indice)->dado;
     // buscando a musica em cada playlist
     for (int i = 0; i < playlists.size(); i++) {
-        Playlist playlist = playlists.get(i)->dado;
-        Lista<Musica> listaDeMusicas = playlist.getMusicas();
+        Playlist *playlist = playlists.get(i)->dado;
+        Lista<Musica> *listaDeMusicas = playlist->getMusicas();
         int indice = buscaMusica(musica, listaDeMusicas);
         if (indice != -1) {
-            playlist.remover(indice);
+            playlist->remover(indice);
         }
     }
 
@@ -62,7 +63,7 @@ void Driver::listarMusicasDoSistema() {
     }
 }
 
-int Driver::buscaMusica(const Musica musica, Lista<Musica>& musicas) {
+int Driver::buscaMusica(const Musica &musica, Lista<Musica>& musicas) {
     for (int i = 0; i < musicas.size(); i++) {
         if (musicas.get(i)->dado == musica) {
             return i;
@@ -72,7 +73,7 @@ int Driver::buscaMusica(const Musica musica, Lista<Musica>& musicas) {
     return -1;
 }
 
-int Driver::buscaMusica(const Musica musica, Lista<Musica> *musicas) {
+int Driver::buscaMusica(const Musica &musica, Lista<Musica> *musicas) {
     for (int i = 0; i < musicas->size(); i++) {
         if (musicas->get(i)->dado == musica) {
             return i;
@@ -82,7 +83,7 @@ int Driver::buscaMusica(const Musica musica, Lista<Musica> *musicas) {
     return -1;
 }
 
-int Driver::buscaPlaylist(Playlist& playlist) {
+int Driver::buscaPlaylist(Playlist *playlist) {
     for (int i = 0; i < playlists.size(); i++) {
         if (playlists.get(i)->dado == playlist) {
             return i;
@@ -92,7 +93,7 @@ int Driver::buscaPlaylist(Playlist& playlist) {
     return -1;
 }
 
-void Driver::cadastrarPlaylist(Playlist &playlist) {
+void Driver::cadastrarPlaylist(Playlist *playlist) {
     if (buscaPlaylist(playlist) != -1) {
         std::cout << "Esta Playlist ja existe!" << std::endl;
     } else {
@@ -109,8 +110,8 @@ void Driver::mostrarPlaylists() {
 
     std::cout << " ----- Playlists Disponiveis ----- " << std::endl;
     for (int i = 0; i < playlists.size(); i++) {
-        Playlist play = playlists.get(i)->dado;
-        std::cout << i << " ----- " << play << std::endl;
+        Playlist *play = playlists.get(i)->dado;
+        std::cout << i << " ----- " << play->getNome() << std::endl;
     }
 }
 
@@ -132,7 +133,7 @@ void Driver::excluirPlaylist() {
     }
 
     std::cout << "Playlist removida com sucesso!" << std::endl;
-    //delete playlists.get(indice)->dado;
+    delete playlists.get(indice)->dado;
     playlists.remover(indice);
 }
 
@@ -160,7 +161,7 @@ void Driver::adicionaUma() {
         return;
     }
 
-    Playlist play = playlists.get(indicePlaylist)->dado;
+    Playlist *play = playlists.get(indicePlaylist)->dado;
 
     listarMusicasDoSistema();
     std::cout << "Escolha o indice da musica para adicionar na playlist " << play << ": ";
@@ -174,8 +175,8 @@ void Driver::adicionaUma() {
     }
 
     Musica musica = sistema.get(indiceMusica)->dado;
-    Musica novaMusica(musica.getTitulo(), musica.getArtista());
-    play.adicionar(novaMusica);
+    Musica novaMusica = Musica(musica.getTitulo(), musica.getArtista());
+    play->adicionar(novaMusica);
     std::cout << "Musica adicionada com sucesso!" << std::endl;
 }
 
@@ -217,8 +218,8 @@ void Driver::adicionaVarias() {
         return;
     }
 
-    Playlist playlist1 = playlists.get(indicePlaylist1)->dado;
-    Playlist playlist2 = playlists.get(indicePlaylist2)->dado;
+    Playlist *playlist1 = playlists.get(indicePlaylist1)->dado;
+    Playlist *playlist2 = playlists.get(indicePlaylist2)->dado;
 
     // TODO: Terminar de implementar
 
@@ -246,11 +247,11 @@ void Driver::listarMusicasDaPlaylist() {
         return;
     }
 
-    Playlist play = playlists.get(indice)->dado;
-    if (play.getMusicas().estaVazia()) {
+    Playlist *play = playlists.get(indice)->dado;
+    if (play->getMusicas()->estaVazia()) {
         std::cout << "Playlist vazia!" << std::endl;
     } else {
-        play.listarMusicas();
+        play->listarMusicas();
     }
 }
 
@@ -272,24 +273,24 @@ void Driver::removerMusicaDaPlaylist() {
         return;
     }
 
-    Playlist play = playlists.get(indicePlaylist)->dado;
-    if (play.getMusicas().estaVazia()) {
+    Playlist *play = playlists.get(indicePlaylist)->dado;
+    if (play->getMusicas()->estaVazia()) {
         std::cout << "Playlist vazia!" << std::endl;
         return;
     }
 
-    play.listarMusicas();
+    play->listarMusicas();
     std::cout << "Escolha o indice da musica que deseja remover: ";
     std::getline(std::cin, input);
     int indiceMusica = std::stoi(input);
 
-    if (indiceMusica < 0 || indiceMusica >= play.getMusicas().size()) {
+    if (indiceMusica < 0 || indiceMusica >= play->getMusicas()->size()) {
         std::cout << "Indice Invalido!" << std::endl;
         std::cout << "Operacao nao concluida!" << std::endl;
         return;
     }
 
-    play.remover(indiceMusica);
+    play->remover(indiceMusica);
     std::cout << "Musica removida com sucesso!" << std::endl;
 }
 
@@ -311,28 +312,28 @@ void Driver::moverMusica() {
         return;
     }
 
-    Playlist play = playlists.get(indice)->dado;
-    if (play.getMusicas().estaVazia()) {
+    Playlist *play = playlists.get(indice)->dado;
+    if (play->getMusicas()->estaVazia()) {
         std::cout << "Playlist vazia!" << std::endl;
         std::cout << "Operacao nao concluida!" << std::endl;
         return;
     }
 
-    play.listarMusicas();
+    play->listarMusicas();
     std::cout << "Escolha o indice da musica: ";
     std::getline(std::cin, input);
     int indiceMusica = std::stoi(input);
-    if (indiceMusica < 0 || indiceMusica >= play.getMusicas().size()) {
+    if (indiceMusica < 0 || indiceMusica >= play->getMusicas()->size()) {
         std::cout << "Indice Invalido!" << std::endl;
         std::cout << "Operacao nao concluida!" << std::endl;
         return;
     }
 
-    Musica musica = play.getMusicas().get(indiceMusica)->dado;
-    int tamanho = play.getMusicas().size();
-    Musica novaMusica(musica.getTitulo(), musica.getArtista());
+    Musica musica = play->getMusicas()->get(indiceMusica)->dado;
+    int tamanho = play->getMusicas()->size();
+    Musica novaMusica = Musica(musica.getTitulo(), musica.getArtista());
 
-    play.listarMusicas();
+    play->listarMusicas();
     std::cout << "Escolha a Nova posicao da musica(indice entre 0 e " << tamanho - 1 << "): ";
     std::getline(std::cin, input);
     int posicao = std::stoi(input);
@@ -343,8 +344,8 @@ void Driver::moverMusica() {
         return;
     }
 
-    play.remover(indiceMusica);
-    play.adicionarMusicaNaPosicao(novaMusica, posicao);
+    play->remover(indiceMusica);
+    play->adicionarMusicaNaPosicao(novaMusica, posicao);
     std::cout << "Musica movida com sucesso!" << std::endl;
 }
 
@@ -365,14 +366,14 @@ void Driver::reproduzirPlaylist() {
         return;
     }
 
-    Playlist play = playlists.get(indice)->dado;
-    if (play.getMusicas().estaVazia()) {
+    Playlist *play = playlists.get(indice)->dado;
+    if (play->getMusicas()->estaVazia()) {
         std::cout << "Playlist vazia!" << std::endl;
         return;
     }
 
     std::string opcao = "";
-    No<Musica> *musicaAtual = play.proximaATocar();
+    No<Musica> *musicaAtual = play->proximaATocar();
     if (musicaAtual == nullptr) {
         opcao = "N";
     }
@@ -382,7 +383,7 @@ void Driver::reproduzirPlaylist() {
         std::cout << "Tocar a Proxima?[s/n]: ";
         std::getline(std::cin, opcao);
         if (opcao == "s" || opcao == "S") {
-            musicaAtual = play.proximaATocar();
+            musicaAtual = play->proximaATocar();
         }
 
         if (musicaAtual == nullptr) {
