@@ -21,13 +21,50 @@ void menu() {
     std::cout << "11 --- Reproduzir uma playlist" << std::endl;
 }
 
+
+Playlist convert_from(Playlist* p) {
+    Playlist res = Playlist("Teste");
+    for (int i = 0; i < p->getMusicas()->size(); i++) {
+        res.adicionar(p->getMusicas()->get(i)->dado);
+    }
+
+    return res;
+}
+
+void testes() {
+    Musica m1 = Musica("La ele", "Manoel");
+    Musica m2 = Musica("Caneta azul", "Manoel");
+    Musica m3 = Musica("Ai ai ai", "Manoel");
+    Musica m4 = Musica("Ela e muito vagabunda", "Manoel");
+
+    Playlist *p1 = new Playlist("Todas");
+    Playlist *p2 = new Playlist("Adicionada");
+    Playlist *p3 = new Playlist("Removida");
+
+    p1->adicionar(m1);
+    p1->adicionar(m2);
+    p2->adicionar(m3);
+    p2->adicionar(m4);
+    p3->adicionar(*p2);
+
+    p1->listarMusicas();
+    p2->listarMusicas();
+    p3->listarMusicas();
+
+    delete p1;
+    delete p2;
+    delete p3;
+}
+
 int main(int argc, char* argv[]) {
     Driver driver;
     int opcao = -1;
     std::string input;
     bool flag = (argc > 1) ? true : false;
 
-    while (opcao != 0) {
+    testes();
+
+    /*while (opcao != 0) {
         menu();
         std::cout << "Escolha uma opcao: ";
         std::getline(std::cin, input);
@@ -95,5 +132,5 @@ int main(int argc, char* argv[]) {
         default:
             std::cout << "Opcao Invalida!" << std::endl;
         }
-    }
+    }*/
 }

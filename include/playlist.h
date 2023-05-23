@@ -61,10 +61,10 @@ public:
 
     /**
     * @brief Adiciona várias músicas em uma playlist.
-    * @param playlist A playlist com as músicas a ser adicionada.
+    * @param playlist A playlist com as músicas a serem adicionadas.
     * @retval void
    */
-    void adicionar(Playlist& playlist);
+    void adicionar(Playlist &playlist);
 
     /**
      * @brief Adiciona uma musica na playlist na posicao desejada.
@@ -155,7 +155,7 @@ public:
     * @retval std::ostream
     * @return O stream de saída com as informações.
    */
-   friend std::ostream& operator<<(std::ostream& saida, Playlist& playlist);
+   friend std::ostream& operator<<(std::ostream& saida, Playlist *playlist);
 
    /**
     * @brief Sobrecarga do operador + para realizar a união entre duas playlists.
@@ -163,7 +163,7 @@ public:
     * @retval Playlist
     * @return Uma nova playlist a partir da união das duas primeiras.
    */
-    Playlist operator +(Playlist &outra);
+    Playlist* operator +(Playlist &outra);
 
     /**
     * @brief Sobrecarga do operador + para adicionar uma música no final da playlist.
@@ -171,7 +171,7 @@ public:
     * @retval Playlist
     * @return Uma nova playlist com a nova música no final.
    */
-    Playlist operator +(Musica &musica);
+    Playlist* operator +(Musica &musica);
 
     /**
      * @brief Sobrecarga do operador - para realizar a diferença entre duas playlists.
@@ -179,7 +179,7 @@ public:
      * @retval Playlist
      * @return Uma nova playlist resultante da operação.
     */
-    Playlist operator -(Playlist &outra);
+    Playlist* operator -(Playlist &outra);
 
     /**
      * @brief Sobrecarga do operador - para remover uma música da playlist.
@@ -187,7 +187,7 @@ public:
      * @retval Playlist
      * @return Uma nova playlist sem a música removida.
     */
-    Playlist operator -(Musica &musica);
+    Playlist* operator -(Musica &musica);
 
     /**
      * @brief Sobrecarga do operador >> para extrair a última música da playlist.
@@ -202,6 +202,21 @@ public:
      * @retval void
     */
     void operator <<(No<Musica> *musica);
+
+private:
+    /**
+    * @brief Adiciona várias músicas em uma playlist.
+    * @param playlist A playlist com as músicas a serem adicionadas.
+    * @retval void
+   */
+    void adicionar(Playlist *playlist);
+
+    /**
+     * @brief Converte uma Playlist para ponteiro de Playlist.
+     * @retval Playlist*
+     * @return Uma cópia da playlist atual como um ponteiro. 
+    */
+    Playlist* toPointer();
 };
 
 #endif

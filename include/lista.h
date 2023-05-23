@@ -106,15 +106,21 @@ public:
      * @retval void
     */
     void adicionar(Lista<T>& elementos) {
-        if (estaVazia()) {
-            cabeca = elementos.getCabeca();
-            cauda = elementos.getCauda();
-        } else {
-            this->cauda->proximo = elementos.getCabeca();
-            this->cauda = elementos.getCauda();
+        for (int i = 0; i < elementos.size(); i++) {
+            inserir(elementos.get(i)->dado);
         }
-        
-        tamanho += elementos.size();
+    }
+    
+    /**
+     * @brief Insere varios elementos na lista.
+     * Versão sobrecarregada para suportar ponteiros.
+     * @param elementos A lista de elementos a ser adicionada.
+     * @retval void
+    */
+    void adicionar(Lista<T> *elementos) {
+        for (int i = 0; i < elementos->size(); i++) {
+            inserir(elementos->get(i)->dado);
+        }
     }
 
     /**

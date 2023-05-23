@@ -111,7 +111,7 @@ void Driver::mostrarPlaylists() {
     std::cout << " ----- Playlists Disponiveis ----- " << std::endl;
     for (int i = 0; i < playlists.size(); i++) {
         Playlist *play = playlists.get(i)->dado;
-        std::cout << i << " ----- " << play->getNome() << std::endl;
+        std::cout << i << " ----- " << play << std::endl;
     }
 }
 

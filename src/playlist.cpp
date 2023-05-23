@@ -33,9 +33,14 @@ void Playlist::adicionar(Musica &musica) {
     musicas->inserir(musica);
 }
 
-void Playlist::adicionar(Playlist& playlist) {
-    Lista<Musica> *listaDeMusicas = playlist.getMusicas();
-    this->musicas->adicionar(*listaDeMusicas);
+// Versão sobrecarregada para dar suporte a ponteiros
+void Playlist::adicionar(Playlist *playlist) {
+    this->musicas->adicionar(playlist->getMusicas());
+}
+
+void Playlist::adicionar(Playlist &playlist) {
+    Playlist *newPlaylist = playlist.toPointer();
+    this->musicas->adicionar(newPlaylist->getMusicas());
 }
 
 void Playlist::adicionarMusicaNaPosicao(Musica &musica, int posicao) {
@@ -104,52 +109,52 @@ bool Playlist::operator==(const Playlist& outra) {
     return this->nome == outra.nome;
 }
 
-std::ostream& operator<<(std::ostream& saida, Playlist& playlist) {
-    saida << playlist.nome;
+std::ostream& operator<<(std::ostream& saida, Playlist *playlist) {
+    saida << playlist->nome;
     return saida;
 }
 
-Playlist Playlist::operator+(Playlist &outra) {
-    Playlist result = Playlist();
-    result.adicionar(*this);
+Playlist* Playlist::operator+(Playlist &outra) {
+    Playlist *result = new Playlist();
+    result->adicionar(*this);
     Lista<Musica> *listaDeMusicas = outra.musicas;
     for (int i = 0; i < listaDeMusicas->size(); i++) {
         Musica musica = listaDeMusicas->get(i)->dado;
         if (!busca(musica)) {
-            result.adicionar(musica);
+            result->adicionar(musica);
         }
     }
 
     return result;
 }
 
-Playlist Playlist::operator+(Musica &musica) {
-    Playlist result = Playlist();
-    result.adicionar(*this);
-    result.adicionar(musica);
+Playlist* Playlist::operator+(Musica &musica) {
+    Playlist *result = new Playlist();
+    result->adicionar(*this);
+    result->adicionar(musica);
     return result;
 }
 
-Playlist Playlist::operator-(Playlist &outra) {
-    Playlist result = Playlist();
+Playlist* Playlist::operator-(Playlist &outra) {
+    Playlist *result = new Playlist();
     for (int i = 0; i < musicas->size(); i++) {
         Musica musica = musicas->get(i)->dado;
         if (!outra.busca(musica)) {
-            result.adicionar(musica);
+            result->adicionar(musica);
         }
     }
 
     return result;
 }
 
-Playlist Playlist::operator-(Musica &musica) {
-    Playlist result = Playlist();
-    result.adicionar(*this);
-    Lista<Musica> *listaDeMusicas = result.getMusicas();
+Playlist* Playlist::operator-(Musica &musica) {
+    Playlist *result = new Playlist();
+    result->adicionar(*this);
+    Lista<Musica> *listaDeMusicas = result->getMusicas();
     int indice = listaDeMusicas->busca(musica);
     
     if (indice != -1) {
-        result.remover(indice);
+        result->remover(indice);
     }
 
     return result;
@@ -168,4 +173,16 @@ void Playlist::operator<<(No<Musica> *musica) {
     if (musica != nullptr) {
         *musicas << musica;
     }
+}
+
+// Retorna uma cópia da playlist atual como um ponteiro.
+// Util para a função adicionar(Playlist &playlist).
+Playlist* Playlist::toPointer() {
+    Playlist *result = new Playlist();
+    result->nome = this->nome;
+    for (int i = 0; i < musicas->size(); i++) {
+        result->adicionar(musicas->get(i)->dado);
+    }
+
+    return result;
 }
