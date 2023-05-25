@@ -31,29 +31,65 @@ Playlist convert_from(Playlist* p) {
     return res;
 }
 
+void mostar_musicas(Lista<Musica> &lista) {
+    for (int i = 0; i < lista.size(); i++) {
+        std::cout << i << " ----- " << lista.get(i)->dado << std::endl;
+    }
+}
+
 void testes() {
     Musica m1 = Musica("La ele", "Manoel");
     Musica m2 = Musica("Caneta azul", "Manoel");
     Musica m3 = Musica("Ai ai ai", "Manoel");
     Musica m4 = Musica("Ela e muito vagabunda", "Manoel");
+    Musica m5 = Musica("So pra testar", "Luan");
 
     Playlist *p1 = new Playlist("Todas");
     Playlist *p2 = new Playlist("Adicionada");
     Playlist *p3 = new Playlist("Removida");
 
+    //Lista<Musica> com_duas;
+    //Lista<Musica> com_tres;
+    //com_duas.inserir(m1);
+    //com_duas.inserir(m2);
+    //com_tres.inserir(m3);
+    //com_tres.inserir(m4);
+    //com_tres.inserir(m5);
+//
+    //Lista<Musica> todas = com_duas + com_tres;
+//
+    //std::cout << "com duas: " << std::endl;
+    //mostar_musicas(com_duas);
+    //std::cout << "com tres: " << std::endl;
+    //mostar_musicas(com_tres);
+    //std::cout << "todas: " << std::endl;
+    //mostar_musicas(todas);
+
     p1->adicionar(m1);
     p1->adicionar(m2);
     p2->adicionar(m3);
     p2->adicionar(m4);
+    p2->adicionar(m1);
     p3->adicionar(*p2);
-
+//
+    Playlist* copia(p2);
     p1->listarMusicas();
     p2->listarMusicas();
-    p3->listarMusicas();
+    copia->setNome("copia de p2");
+    Playlist* copia_p2 = copia->toPointer();
+    copia_p2->listarMusicas();
+    //copia.listarMusicas();
+    //p3->listarMusicas();
+
+    Playlist* uniao = (*p1 + *p2);
+    uniao->setNome("uniao");
+    uniao->listarMusicas();
 
     delete p1;
     delete p2;
     delete p3;
+    delete copia_p2;
+    delete uniao;
 }
 
 int main(int argc, char* argv[]) {

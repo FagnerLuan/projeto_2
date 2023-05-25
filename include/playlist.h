@@ -203,6 +203,13 @@ public:
     */
     void operator <<(No<Musica> *musica);
 
+    /**
+     * @brief Converte uma Playlist para ponteiro de Playlist.
+     * @retval Playlist*
+     * @return Uma cópia da playlist atual como um ponteiro. 
+    */
+    Playlist* toPointer();
+
 private:
     /**
     * @brief Adiciona várias músicas em uma playlist.
@@ -211,12 +218,7 @@ private:
    */
     void adicionar(Playlist *playlist);
 
-    /**
-     * @brief Converte uma Playlist para ponteiro de Playlist.
-     * @retval Playlist*
-     * @return Uma cópia da playlist atual como um ponteiro. 
-    */
-    Playlist* toPointer();
+    
 };
 
 #endif

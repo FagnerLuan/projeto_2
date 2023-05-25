@@ -293,7 +293,7 @@ public:
      * @retval Lista<T>
      * @return Uma nova lista criada a partir das duas primeiras.
     */
-    Lista<T>& operator +(const Lista<T>& outra) {
+    Lista<T> operator +(Lista<T>& outra) {
         Lista<T> result;
         result.adicionar(*this);
         result.adicionar(outra);

@@ -41,6 +41,7 @@ void Playlist::adicionar(Playlist *playlist) {
 void Playlist::adicionar(Playlist &playlist) {
     Playlist *newPlaylist = playlist.toPointer();
     this->musicas->adicionar(newPlaylist->getMusicas());
+    delete newPlaylist;
 }
 
 void Playlist::adicionarMusicaNaPosicao(Musica &musica, int posicao) {
