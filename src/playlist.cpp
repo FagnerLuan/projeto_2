@@ -172,7 +172,14 @@ void Playlist::operator>>(No<Musica> *musica) {
 
 void Playlist::operator<<(No<Musica> *musica) {
     if (musica != nullptr) {
-        *musicas << musica;
+        Lista<Musica> *antiga = this->musicas;
+        Lista<Musica> *nova = new Lista<Musica>();
+        for (int i = 0; i < antiga->size(); i++) {
+            nova->inserir(antiga->get(i)->dado);
+        }
+        delete musicas;
+        *nova << musica;
+        this->musicas = nova;
     }
 }
 

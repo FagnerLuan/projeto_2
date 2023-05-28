@@ -310,11 +310,13 @@ public:
         if (estaVazia()) {
             no = nullptr;
         } else {
-            T elemento = get(tamanho - 1)->dado;
+            int size = tamanho - 1;
+            T elemento = get(size)->dado;
             no->dado = elemento;
-            remover(tamanho - 1);
+            this->remover(size);
         }
     }
+
 
     /**
      * @brief Insere um elemento no fim da lista.
@@ -322,19 +324,9 @@ public:
      * @retval void
     */
     void operator <<(No<T> *elemento) {
-        if (elemento == nullptr) {
-            return;
+        if (elemento != nullptr) {
+            this->inserir(elemento->dado);
         }
-
-        if (cabeca == nullptr) {
-            cabeca = elemento;
-            cauda = elemento;
-        } else {
-            cauda->proximo = elemento;
-            cauda = elemento;
-        }
-
-        tamanho++;
     }
 
 };

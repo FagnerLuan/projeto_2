@@ -21,9 +21,16 @@ public:
      * @param dado O valor que o No armazenará.
     */
     No(T dado) {
-    this->dado = dado;
-    this->proximo = nullptr;
-}
+        this->dado = dado;
+        this->proximo = nullptr;
+    }
+    /**
+     * @brief Construtor que não recebe parametro.
+    */
+    No() {
+        this->proximo = nullptr;
+    }
+
     /**
      * @brief Destrutor.
     */

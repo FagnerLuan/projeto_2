@@ -43,10 +43,11 @@ void testes() {
     Musica m3 = Musica("Ai ai ai", "Manoel");
     Musica m4 = Musica("Ela e muito vagabunda", "Manoel");
     Musica m5 = Musica("So pra testar", "Luan");
+    Musica m6 = Musica("Peludim", "Chaves");
 
     Playlist *p1 = new Playlist("Todas");
-    Playlist *p2 = new Playlist("Adicionada");
-    Playlist *p3 = new Playlist("Removida");
+    //Playlist *p2 = new Playlist("Adicionada");
+    //Playlist *p3 = new Playlist("Removida");
 
     //Lista<Musica> com_duas;
     //Lista<Musica> com_tres;
@@ -67,29 +68,58 @@ void testes() {
 
     p1->adicionar(m1);
     p1->adicionar(m2);
-    p2->adicionar(m3);
-    p2->adicionar(m4);
-    p2->adicionar(m1);
-    p3->adicionar(*p2);
+    p1->adicionar(m3);
+    p1->adicionar(m4);
+    p1->adicionar(m5);
+    //p2->adicionar(m3);
+    //p2->adicionar(m4);
+    //p2->adicionar(m1);
+    //p3->adicionar(*p2);
 //
-    Playlist* copia(p2);
-    p1->listarMusicas();
-    p2->listarMusicas();
-    copia->setNome("copia de p2");
-    Playlist* copia_p2 = copia->toPointer();
-    copia_p2->listarMusicas();
+    //Playlist* copia(p2);
+    //p1->listarMusicas();
+    //p2->listarMusicas();
+    //copia->setNome("copia de p2");
+    //Playlist* copia_p2 = copia->toPointer();
+    //copia_p2->listarMusicas();
     //copia.listarMusicas();
     //p3->listarMusicas();
 
-    Playlist* uniao = (*p1 + *p2);
-    uniao->setNome("uniao");
-    uniao->listarMusicas();
+    //Playlist* uniao = (*p1 + *p2);
+    //uniao->setNome("uniao");
+    //uniao->listarMusicas();
+
+    //Playlist* somada = *p1 + m5;
+    //somada->listarMusicas();
+    //int removidos = p1->remover(*p2);
+    //std::cout << removidos << std::endl;
+    //p1->listarMusicas();
+
+    //Playlist *subtraida = *p1 - *p2;
+    //subtraida->setNome("Subtraida p1 - p2");
+    //subtraida->listarMusicas();
+    //Playlist *sub2 = *subtraida - m5;
+    //sub2->setNome("Sub2");
+    //sub2->listarMusicas();
+
+    No<Musica> *musica = new No<Musica>();
+    No<Musica> *peludim = new No<Musica>(m6);
+    *p1 >> musica;
+    std::cout << musica->dado << std::endl;
+    p1->listarMusicas();
+    *p1 << peludim;
+    p1->listarMusicas();
 
     delete p1;
-    delete p2;
-    delete p3;
-    delete copia_p2;
-    delete uniao;
+    //delete p2;
+    //delete p3;
+    //delete copia_p2;
+    //delete uniao;
+    //delete somada;
+    //delete subtraida;
+    //delete sub2;
+    delete musica;
+    //delete peludim;
 }
 
 int main(int argc, char* argv[]) {
