@@ -13,6 +13,14 @@ Driver::~Driver() {
         delete noAtual->dado;
         noAtual = proximo;
     }
+
+    if (entrada.is_open()) {
+        entrada.close();
+    }
+
+    if (saida.is_open()) {
+        saida.close();
+    }
 }
 
 void Driver::cadastrarMusica(Musica& musica) {
@@ -428,15 +436,15 @@ Lista<std::string> Driver::split(std::string texto, char sep) {
         }
     } else {
         int start = 0;
-        int s_count = 0;
+        int sCount = 0;
         int counter = 0;
-        while (s_count < times) {
+        while (sCount < times) {
             if (novoTexto[counter] == sep) {
                 std::string sub = novoTexto.substr(start, counter);
                 result.inserir(sub);
                 start = counter + 1;
                 novoTexto = novoTexto.substr(start, novoTexto.length());
-                s_count++;
+                sCount++;
             }
             counter++;
         }
@@ -444,4 +452,49 @@ Lista<std::string> Driver::split(std::string texto, char sep) {
     }
 
     return result;
+}
+
+void Driver::setup() {
+    entrada.open("../data/playlists.txt", std::ios::in);
+    if (!entrada) {
+        abort();
+    }
+
+    std::string linha;
+    while (!entrada.eof()) {
+        std::getline(entrada, linha);
+        Lista<std::string> info = split(linha, ';');
+        Playlist *playlist = new Playlist(info.get(0)->dado);
+        info.remover(0);
+        Lista<std::string> musicas = split(info.get(0)->dado, ',');
+        for (int i = 0; i < musicas.size(); i++) {
+            Lista<std::string> musicaEArtista = split(musicas.get(i)->dado, ':');
+            Musica musica = Musica(musicaEArtista.get(0)->dado, musicaEArtista.get(1)->dado);
+            cadastrarMusica(musica);
+            playlist->adicionar(musica);
+        }
+    }
+
+    entrada.close();
+}
+
+void Driver::save() {
+    saida.open("../data/playlists.txt", std::ios::out);
+    for (int i = 0; i < playlists.size(); i++) {
+        Playlist *play = playlists.get(i)->dado;
+        saida << play->getNome() << ';';
+        for (int j = 0; j < play->getMusicas()->size(); j++) {
+            Musica m = play->getMusicas()->get(i)->dado;
+            if (play->getMusicas()->size() > 0) {
+                saida << m.getTitulo() << ':' << m.getArtista() << ',';
+            }
+        }
+
+        if (i < playlists.size() - 1) {
+            saida << '\n';
+        }
+    }
+
+    saida.close();
+
 }

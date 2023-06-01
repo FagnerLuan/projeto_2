@@ -188,6 +188,11 @@ CMakeFiles/simple_song_player.dir/src/driver.cpp.o: /home/luan/atividades/projet
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/bits/istream.tcc \
+  /usr/include/c++/13/fstream \
+  /usr/include/c++/13/bits/codecvt.h \
+  /usr/include/c++/13/x86_64-redhat-linux/bits/basic_file.h \
+  /usr/include/c++/13/x86_64-redhat-linux/bits/c++io.h \
+  /usr/include/c++/13/bits/fstream.tcc \
   /home/luan/atividades/projeto_2/include/lista.h \
   /home/luan/atividades/projeto_2/include/no.h \
   /home/luan/atividades/projeto_2/include/musica.h \
@@ -332,9 +337,8 @@ CMakeFiles/simple_song_player.dir/src/main.cpp.o: /home/luan/atividades/projeto_
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/tuple \
-  /home/luan/atividades/projeto_2/include/driver.h \
-  /usr/include/c++/13/iostream \
-  /usr/include/c++/13/ostream \
+  /usr/include/c++/13/fstream \
+  /usr/include/c++/13/istream \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/exception \
   /usr/include/c++/13/bits/exception_ptr.h \
@@ -377,9 +381,15 @@ CMakeFiles/simple_song_player.dir/src/main.cpp.o: /home/luan/atividades/projeto_
   /usr/include/c++/13/x86_64-redhat-linux/bits/ctype_inline.h \
   /usr/include/c++/13/bits/locale_facets.tcc \
   /usr/include/c++/13/bits/basic_ios.tcc \
+  /usr/include/c++/13/ostream \
   /usr/include/c++/13/bits/ostream.tcc \
-  /usr/include/c++/13/istream \
   /usr/include/c++/13/bits/istream.tcc \
+  /usr/include/c++/13/bits/codecvt.h \
+  /usr/include/c++/13/x86_64-redhat-linux/bits/basic_file.h \
+  /usr/include/c++/13/x86_64-redhat-linux/bits/c++io.h \
+  /usr/include/c++/13/bits/fstream.tcc \
+  /home/luan/atividades/projeto_2/include/driver.h \
+  /usr/include/c++/13/iostream \
   /home/luan/atividades/projeto_2/include/lista.h \
   /home/luan/atividades/projeto_2/include/no.h \
   /home/luan/atividades/projeto_2/include/musica.h \
@@ -780,6 +790,10 @@ CMakeFiles/simple_song_player.dir/src/playlist.cpp.o: /home/luan/atividades/proj
 
 /home/luan/atividades/projeto_2/include/no.h:
 
+/usr/include/c++/13/bits/fstream.tcc:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/basic_file.h:
+
 /usr/include/c++/13/istream:
 
 /usr/include/c++/13/bits/ostream.tcc:
@@ -918,6 +932,8 @@ CMakeFiles/simple_song_player.dir/src/playlist.cpp.o: /home/luan/atividades/proj
 
 /usr/include/c++/13/bits/exception.h:
 
+/usr/include/c++/13/fstream:
+
 /usr/include/c++/13/bits/charconv.h:
 
 /usr/include/c++/13/cstdio:
@@ -961,6 +977,8 @@ CMakeFiles/simple_song_player.dir/src/playlist.cpp.o: /home/luan/atividades/proj
 /usr/include/gnu/stubs.h:
 
 /usr/include/bits/pthreadtypes-arch.h:
+
+/usr/include/c++/13/bits/codecvt.h:
 
 /usr/include/bits/types/FILE.h:
 
@@ -1037,6 +1055,8 @@ CMakeFiles/simple_song_player.dir/src/playlist.cpp.o: /home/luan/atividades/proj
 /usr/include/sys/types.h:
 
 /usr/include/c++/13/ext/numeric_traits.h:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/c++io.h:
 
 /usr/include/c++/13/bits/stl_algobase.h:
 

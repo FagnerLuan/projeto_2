@@ -1,6 +1,7 @@
 #ifndef DRIVER_H
 #define DRIVER_H
 #include<iostream>
+#include<fstream>
 #include "lista.h"
 #include "musica.h"
 #include "playlist.h"
@@ -15,6 +16,8 @@ class Driver {
 private:
     Lista<Musica> sistema; /**< as musicas do sistema*/
     Lista<Playlist*> playlists; /**< as playlists do usuário*/
+    std::ifstream entrada;
+    std::ofstream saida;
 
 public:
     /**
@@ -136,6 +139,18 @@ public:
      * @retval void
     */
     void reproduzirPlaylist();
+
+    /**
+     * @brief Faz a configuração incicial para a lista de música do sistema e as playlists a partir do arquivo
+     * @retval void
+    */
+    void setup();
+
+    /**
+     * @brief Salva os dados atuais no arquivo.
+     * @retval void
+    */
+    void save();
 
 private:
     /**
