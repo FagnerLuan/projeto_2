@@ -16,28 +16,12 @@ void menu() {
     std::cout << "6 ---- Excluir uma Playlist" << std::endl;
     std::cout << "7 ---- Adicionar musicas em uma playlist" << std::endl;
     std::cout << "8 ---- Listar as musicas de uma playlist" << std::endl;
-    std::cout << "9 ---- Excluir musica de uma playlist" << std::endl;
+    std::cout << "9 ---- Excluir musicas de uma playlist" << std::endl;
     std::cout << "10 --- Mover musica na playlist" << std::endl;
     std::cout << "11 --- Reproduzir uma playlist" << std::endl;
-}
-
-void testes() {
-    /*std::ifstream entrada("../data/playlists.txt", std::ios::in);
-    //std::ofstream saida("temp.txt", std::ios::out);
-    if (!entrada) {
-        abort();
-    }
-    std::string linha;
-    while (!entrada.eof()) {
-        std::getline(entrada, linha);
-        std::cout << linha << '\n';
-    }
-    entrada.close();
-    std::ofstream saida("../data/playlists.txt", std::ios::out);
-    saida << "Memes;Caneta Azul:Manoel Gomes,Ai ai ai:Manoel Gomes\n";
-    saida << "So timbasom;No pe do meu pau:Timbasom\n";
-    saida.close();
-    saveFile("../data/playlists.txt");*/
+    std::cout << "12 --- Unir Playlists" << std::endl;
+    std::cout << "13 --- Adicionar musica no fim da playlist" << std::endl;
+    std::cout << "14 --- Diferenca enrtre playlists" << std::endl;
 }
 
 int main(int argc, char* argv[]) {
@@ -46,7 +30,6 @@ int main(int argc, char* argv[]) {
     std::string input;
     bool flag = (argc > 1) ? true : false;
 
-    //testes();
 
     if (flag) {
         driver.setup();
@@ -61,6 +44,8 @@ int main(int argc, char* argv[]) {
         switch (opcao) {
         case 0:
             std::cout << "Finalizando o Programa!" << std::endl;
+            std::cout << "Salvando Informaçoes..." << std::endl;
+            driver.save();
             break;
         case 1:
             {
@@ -103,7 +88,7 @@ int main(int argc, char* argv[]) {
             driver.excluirPlaylist();
             break;
         case 7:
-            driver.adicionarMusicaEmPlaylist(flag);
+            driver.adicionarMusicaEmPlaylist();
             break;
         case 8:
             driver.listarMusicasDaPlaylist();
@@ -116,6 +101,15 @@ int main(int argc, char* argv[]) {
             break;
         case 11:
             driver.reproduzirPlaylist();
+            break;
+        case 12:
+            driver.unirPlaylists();
+            break;
+        case 13:
+            driver.playlistComMusicaNoFim();
+            break;
+        case 14:
+            driver.diferencaEntrePlaylists();
             break;
         default:
             std::cout << "Opcao Invalida!" << std::endl;

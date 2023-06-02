@@ -101,19 +101,9 @@ public:
      * @brief Adiciona uma musica em uma playlist.
      * @retval void
     */
-    void adicionarMusicaEmPlaylist(bool flag);
+    void adicionarMusicaEmPlaylist();
 
-    /**
-     * @brief Adiciona uma musica em uma playlist.
-     * @retval void
-    */
-    void adicionaUma();
-
-    /**
-     * @brief Adiciona várias musicas em uma playlist.
-     * @retval void
-    */
-    void adicionaVarias();
+    
 
     /**
      * @brief Lista toas as musicas de uma Playlist.
@@ -126,6 +116,7 @@ public:
      * @retval void
     */
     void removerMusicaDaPlaylist();
+
 
     /**
      * @brief Move uma musica de uma playlist.
@@ -152,7 +143,57 @@ public:
     */
     void save();
 
+    /**
+     * @brief Faz a união entre duas playlists.
+     * @retval void
+    */
+    void unirPlaylists();
+
+    /**
+     * @brief Cria uma nova playlist com uma musica nova no final.
+     * @retval void
+    */
+    void playlistComMusicaNoFim();
+
+    /**
+     * @brief Faz a diferença entre duas playlists.
+     * @retval void
+    */
+    void diferencaEntrePlaylists();
+
+    /**
+     * @brief Cria uma nova playlist sem uma determinada musica.
+     * @retval void
+    */
+    void playlistMenos();
+
 private:
+
+    /**
+     * @brief Adiciona uma musica em uma playlist.
+     * @retval void
+    */
+    void adicionaUma();
+
+    /**
+     * @brief Adiciona várias musicas em uma playlist.
+     * @retval void
+    */
+    void adicionaVarias();
+
+    /**
+     * @brief Remove uma música de uma playlist.
+     * @retval void
+    */
+    void removeUma();
+
+    /**
+     * @brief Remove várias músicas de uma playlist.
+     * @retval void
+    */
+    void removeVarias();
+
+
     /**
      * @brief Conta a quantidade de vezes que um caracter aparece em uma string.
      * @param texto O texto onde procuramos o caracter.
@@ -160,7 +201,7 @@ private:
      * @retval int
      * @return O número de vezes que o caracter aparece no texto.
     */
-    int count_char(std::string texto, char c);
+    int countChar(std::string texto, char c);
 
     /**
      * @brief Separa uma string em varias a partir de um separador.
