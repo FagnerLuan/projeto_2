@@ -540,8 +540,9 @@ Lista<std::string> Driver::split(std::string texto, char sep) {
     return result;
 }
 
-void Driver::setup() {
-    entrada.open("../data/playlists.txt", std::ios::in);
+void Driver::setup(std::string fileName) {
+    setFilePath(fileName);
+    entrada.open(this->filePath, std::ios::in);
     if (!entrada) {
         abort();
     }
@@ -551,6 +552,7 @@ void Driver::setup() {
         std::getline(entrada, linha);
         Lista<std::string> info = split(linha, ';');
         Playlist *playlist = new Playlist(info.get(0)->dado);
+        cadastrarPlaylist(playlist);
         info.remover(0);
         Lista<std::string> musicas = split(info.get(0)->dado, ',');
         for (int i = 0; i < musicas.size(); i++) {
@@ -564,15 +566,24 @@ void Driver::setup() {
     entrada.close();
 }
 
+void Driver::setFilePath(std::string path) {
+    this->filePath = "../data/" + path;
+}
+
 void Driver::save() {
-    saida.open("../data/playlists.txt", std::ios::out);
+    saida.open(this->filePath,  std::ios::out);
     for (int i = 0; i < playlists.size(); i++) {
         Playlist *play = playlists.get(i)->dado;
         saida << play->getNome() << ';';
-        for (int j = 0; j < play->getMusicas()->size(); j++) {
-            Musica m = play->getMusicas()->get(i)->dado;
-            if (play->getMusicas()->size() > 0) {
-                saida << m.getTitulo() << ':' << m.getArtista() << ',';
+        Lista<Musica> *musicas = play->getMusicas();
+        for (int j = 0; j < musicas->size(); j++) {
+            Musica m = musicas->get(j)->dado;
+            if (musicas->size() > 0) {
+                if (j < musicas->size() - 1) {
+                    saida << m.getTitulo() << ':' << m.getArtista() << ',';
+                } else {
+                    saida << m.getTitulo() << ':' << m.getArtista();
+                }
             }
         }
 
@@ -634,7 +645,7 @@ void Driver::playlistComMusicaNoFim() {
     }
 
     mostrarPlaylists();
-    std::cout << "Escolha o indice da primeira playlist: ";
+    std::cout << "Escolha o indice da playlist: ";
     std::string input;
     std::getline(std::cin, input);
     int indice = std::stoi(input);

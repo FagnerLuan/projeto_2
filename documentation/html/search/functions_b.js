@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['remover_0',['remover',['../classLista.html#ab7385c3496bb8f72b2540d7ce14ac71c',1,'Lista']]],
-  ['removermusica_1',['removerMusica',['../classPlaylist.html#a2a3fb996d94b7c6dd44b3f7d184c87f7',1,'Playlist']]],
-  ['removermusicadaplaylist_2',['removerMusicaDaPlaylist',['../funcoes_8h.html#a47ac4b2226a3a5d68eade5955c89e2a6',1,'removerMusicaDaPlaylist(Lista&lt; Playlist * &gt; &amp;lista, int index):&#160;funcoes.cpp'],['../funcoes_8cpp.html#a47ac4b2226a3a5d68eade5955c89e2a6',1,'removerMusicaDaPlaylist(Lista&lt; Playlist * &gt; &amp;lista, int index):&#160;funcoes.cpp']]],
-  ['removerplaylist_3',['removerPlaylist',['../funcoes_8h.html#ad7a8efcf260344759bd44ed09edc7b5a',1,'removerPlaylist(Lista&lt; Playlist * &gt; &amp;lista, int indice):&#160;funcoes.cpp'],['../funcoes_8cpp.html#ad7a8efcf260344759bd44ed09edc7b5a',1,'removerPlaylist(Lista&lt; Playlist * &gt; &amp;lista, int indice):&#160;funcoes.cpp']]],
-  ['reproduzirplaylist_4',['reproduzirPlaylist',['../funcoes_8h.html#a3124c42aef6b9344c42c820b53d564c6',1,'reproduzirPlaylist(Lista&lt; Playlist * &gt; &amp;lista, int index):&#160;funcoes.cpp'],['../funcoes_8cpp.html#a3124c42aef6b9344c42c820b53d564c6',1,'reproduzirPlaylist(Lista&lt; Playlist * &gt; &amp;lista, int index):&#160;funcoes.cpp']]]
+  ['playlist_0',['Playlist',['../classPlaylist.html#af66f530866f4371706f2fbd95147b82e',1,'Playlist::Playlist(std::string nome)'],['../classPlaylist.html#aef38d55e42995be147977726350f3ada',1,'Playlist::Playlist()'],['../classPlaylist.html#a308a3eeb5f5d9344c019f4de11d746da',1,'Playlist::Playlist(Playlist &amp;outra)']]],
+  ['playlistcommusicanofim_1',['playlistComMusicaNoFim',['../classDriver.html#a74f36cda9af41ba3d3c0149e38e3878c',1,'Driver']]],
+  ['playlistmenos_2',['playlistMenos',['../classDriver.html#af0e746d27cc6bfc06df6c16be045a484',1,'Driver']]],
+  ['proximaatocar_3',['proximaATocar',['../classPlaylist.html#ad9afa13755e02b848bc5521af8121cbf',1,'Playlist']]]
 ];

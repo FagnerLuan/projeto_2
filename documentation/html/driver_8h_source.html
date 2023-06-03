@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>playlist_manager: Código-Fonte de include/driver.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">playlist_manager<span id="projectnumber">&#160;2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhum resultado encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">driver.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="driver_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef DRIVER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define DRIVER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include&lt;iostream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include&lt;fstream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="lista_8h.html">lista.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="musica_8h.html">musica.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="playlist_8h.html">playlist.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classDriver.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classDriver.html">Driver</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_class" href="classLista.html">Lista&lt;Musica&gt;</a> sistema; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="classLista.html">Lista&lt;Playlist*&gt;</a> playlists; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::ifstream entrada; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::ofstream saida; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::string filePath; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="classDriver.html#af0658d103e3e810a8e9ef0a53bb2e261">Driver</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="classDriver.html#ac7645eea8d3ce2bc39ddbda5e840297a">~Driver</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a1c1d97153ecf1920cf6e189a81400627">cadastrarMusica</a>(<a class="code hl_class" href="classMusica.html">Musica</a> &amp;musica);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a4f03780ae30a62f5c93d2fe7e40cceb3">removerDoSistema</a>(<span class="keywordtype">int</span> indice);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#af475ff2f77dd62f1f43f9e057b320efb">listarMusicasDoSistema</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classDriver.html#a2cde3529e0591ac8f39c0c57fdca4749">buscaMusica</a>(<span class="keyword">const</span> <a class="code hl_class" href="classMusica.html">Musica</a> &amp;musica, <a class="code hl_class" href="classLista.html">Lista&lt;Musica&gt;</a>&amp; musicas);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classDriver.html#a2cde3529e0591ac8f39c0c57fdca4749">buscaMusica</a>(<span class="keyword">const</span> <a class="code hl_class" href="classMusica.html">Musica</a> &amp;musica, <a class="code hl_class" href="classLista.html">Lista&lt;Musica&gt;</a> *musicas);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classDriver.html#aba107df97b3f0afadef0b5a3f978876d">buscaPlaylist</a>(<a class="code hl_class" href="classPlaylist.html">Playlist</a> *playlist);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#abab4e8083981b7e5dccf57ed285f9d4c">cadastrarPlaylist</a>(<a class="code hl_class" href="classPlaylist.html">Playlist</a> *playlist);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a71452fe971fd8774fcbc5ce8091d9ef7">mostrarPlaylists</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#ac6b94c19e679191e1d8063775efd8ba4">excluirPlaylist</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a17ea0d470c188b1e3ecb65f196621e55">adicionarMusicaEmPlaylist</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a1c404cfee9c0e70a97c9f533e82a622d">listarMusicasDaPlaylist</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a47283e6cc7633b91171900e7ad2ed097">removerMusicaDaPlaylist</a>();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#aaff950cb77b22dcd91417a5d052a1851">moverMusica</a>();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a4a39adf711551a61df615d7e927a2398">reproduzirPlaylist</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#aca0b1e5d1d705a564c1527c70fdfb769">setup</a>(std::string fileName);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#af10fd1b24771be5d33ca44617a04b209">setFilePath</a>(std::string path);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a6d2a540800cd08814fcb216b7e51ecfb">save</a>();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a387dd3dbddc781b0d492860cd506fc29">unirPlaylists</a>();</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a74f36cda9af41ba3d3c0149e38e3878c">playlistComMusicaNoFim</a>();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#a2036973c9b0d5d3573486181079738c0">diferencaEntrePlaylists</a>();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDriver.html#af0e746d27cc6bfc06df6c16be045a484">playlistMenos</a>();</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">void</span> adicionaUma();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordtype">void</span> adicionaVarias();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordtype">void</span> removeUma();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordtype">void</span> removeVarias();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordtype">int</span> countChar(std::string texto, <span class="keywordtype">char</span> c);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <a class="code hl_class" href="classLista.html">Lista&lt;std::string&gt;</a> split(std::string texto, <span class="keywordtype">char</span> sep);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>};</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassDriver_html"><div class="ttname"><a href="classDriver.html">Driver</a></div><div class="ttdoc">Uma classe que gerencia as músicas do sistema e as playlists.</div><div class="ttdef"><b>Definition:</b> driver.h:15</div></div>
+<div class="ttc" id="aclassDriver_html_a17ea0d470c188b1e3ecb65f196621e55"><div class="ttname"><a href="classDriver.html#a17ea0d470c188b1e3ecb65f196621e55">Driver::adicionarMusicaEmPlaylist</a></div><div class="ttdeci">void adicionarMusicaEmPlaylist()</div><div class="ttdoc">Adiciona uma musica em uma playlist.</div><div class="ttdef"><b>Definition:</b> driver.cpp:237</div></div>
+<div class="ttc" id="aclassDriver_html_a1c1d97153ecf1920cf6e189a81400627"><div class="ttname"><a href="classDriver.html#a1c1d97153ecf1920cf6e189a81400627">Driver::cadastrarMusica</a></div><div class="ttdeci">void cadastrarMusica(Musica &amp;musica)</div><div class="ttdoc">Adiciona uma música no sistema.</div><div class="ttdef"><b>Definition:</b> driver.cpp:26</div></div>
+<div class="ttc" id="aclassDriver_html_a1c404cfee9c0e70a97c9f533e82a622d"><div class="ttname"><a href="classDriver.html#a1c404cfee9c0e70a97c9f533e82a622d">Driver::listarMusicasDaPlaylist</a></div><div class="ttdeci">void listarMusicasDaPlaylist()</div><div class="ttdoc">Lista toas as musicas de uma Playlist.</div><div class="ttdef"><b>Definition:</b> driver.cpp:261</div></div>
+<div class="ttc" id="aclassDriver_html_a2036973c9b0d5d3573486181079738c0"><div class="ttname"><a href="classDriver.html#a2036973c9b0d5d3573486181079738c0">Driver::diferencaEntrePlaylists</a></div><div class="ttdeci">void diferencaEntrePlaylists()</div><div class="ttdoc">Faz a diferença entre duas playlists.</div><div class="ttdef"><b>Definition:</b> driver.cpp:683</div></div>
+<div class="ttc" id="aclassDriver_html_a2cde3529e0591ac8f39c0c57fdca4749"><div class="ttname"><a href="classDriver.html#a2cde3529e0591ac8f39c0c57fdca4749">Driver::buscaMusica</a></div><div class="ttdeci">int buscaMusica(const Musica &amp;musica, Lista&lt; Musica &gt; &amp;musicas)</div><div class="ttdoc">Faz uma busca nas musicas e retorna o indice da musica na lista.</div><div class="ttdef"><b>Definition:</b> driver.cpp:74</div></div>
+<div class="ttc" id="aclassDriver_html_a387dd3dbddc781b0d492860cd506fc29"><div class="ttname"><a href="classDriver.html#a387dd3dbddc781b0d492860cd506fc29">Driver::unirPlaylists</a></div><div class="ttdeci">void unirPlaylists()</div><div class="ttdoc">Faz a união entre duas playlists.</div><div class="ttdef"><b>Definition:</b> driver.cpp:599</div></div>
+<div class="ttc" id="aclassDriver_html_a47283e6cc7633b91171900e7ad2ed097"><div class="ttname"><a href="classDriver.html#a47283e6cc7633b91171900e7ad2ed097">Driver::removerMusicaDaPlaylist</a></div><div class="ttdeci">void removerMusicaDaPlaylist()</div><div class="ttdoc">Remove uma música de uma playlist.</div><div class="ttdef"><b>Definition:</b> driver.cpp:367</div></div>
+<div class="ttc" id="aclassDriver_html_a4a39adf711551a61df615d7e927a2398"><div class="ttname"><a href="classDriver.html#a4a39adf711551a61df615d7e927a2398">Driver::reproduzirPlaylist</a></div><div class="ttdeci">void reproduzirPlaylist()</div><div class="ttdoc">Reproduz uma playlist.</div><div class="ttdef"><b>Definition:</b> driver.cpp:446</div></div>
+<div class="ttc" id="aclassDriver_html_a4f03780ae30a62f5c93d2fe7e40cceb3"><div class="ttname"><a href="classDriver.html#a4f03780ae30a62f5c93d2fe7e40cceb3">Driver::removerDoSistema</a></div><div class="ttdeci">void removerDoSistema(int indice)</div><div class="ttdoc">Remove uma música do sistema através de um índice.</div><div class="ttdef"><b>Definition:</b> driver.cpp:35</div></div>
+<div class="ttc" id="aclassDriver_html_a6d2a540800cd08814fcb216b7e51ecfb"><div class="ttname"><a href="classDriver.html#a6d2a540800cd08814fcb216b7e51ecfb">Driver::save</a></div><div class="ttdeci">void save()</div><div class="ttdoc">Salva os dados atuais no arquivo.</div><div class="ttdef"><b>Definition:</b> driver.cpp:573</div></div>
+<div class="ttc" id="aclassDriver_html_a71452fe971fd8774fcbc5ce8091d9ef7"><div class="ttname"><a href="classDriver.html#a71452fe971fd8774fcbc5ce8091d9ef7">Driver::mostrarPlaylists</a></div><div class="ttdeci">void mostrarPlaylists()</div><div class="ttdoc">Mostra as Playlists disponíveis.</div><div class="ttdef"><b>Definition:</b> driver.cpp:113</div></div>
+<div class="ttc" id="aclassDriver_html_a74f36cda9af41ba3d3c0149e38e3878c"><div class="ttname"><a href="classDriver.html#a74f36cda9af41ba3d3c0149e38e3878c">Driver::playlistComMusicaNoFim</a></div><div class="ttdeci">void playlistComMusicaNoFim()</div><div class="ttdoc">Cria uma nova playlist com uma musica nova no final.</div><div class="ttdef"><b>Definition:</b> driver.cpp:641</div></div>
+<div class="ttc" id="aclassDriver_html_aaff950cb77b22dcd91417a5d052a1851"><div class="ttname"><a href="classDriver.html#aaff950cb77b22dcd91417a5d052a1851">Driver::moverMusica</a></div><div class="ttdeci">void moverMusica()</div><div class="ttdoc">Move uma musica de uma playlist. A música será movida da posição atual para uma nova posição na playl...</div><div class="ttdef"><b>Definition:</b> driver.cpp:391</div></div>
+<div class="ttc" id="aclassDriver_html_aba107df97b3f0afadef0b5a3f978876d"><div class="ttname"><a href="classDriver.html#aba107df97b3f0afadef0b5a3f978876d">Driver::buscaPlaylist</a></div><div class="ttdeci">int buscaPlaylist(Playlist *playlist)</div><div class="ttdoc">faz uma busca nas playlists e retorna o indice da playlist.</div><div class="ttdef"><b>Definition:</b> driver.cpp:94</div></div>
+<div class="ttc" id="aclassDriver_html_abab4e8083981b7e5dccf57ed285f9d4c"><div class="ttname"><a href="classDriver.html#abab4e8083981b7e5dccf57ed285f9d4c">Driver::cadastrarPlaylist</a></div><div class="ttdeci">void cadastrarPlaylist(Playlist *playlist)</div><div class="ttdoc">Cadastra uma Playlist no sistema.</div><div class="ttdef"><b>Definition:</b> driver.cpp:104</div></div>
+<div class="ttc" id="aclassDriver_html_ac6b94c19e679191e1d8063775efd8ba4"><div class="ttname"><a href="classDriver.html#ac6b94c19e679191e1d8063775efd8ba4">Driver::excluirPlaylist</a></div><div class="ttdeci">void excluirPlaylist()</div><div class="ttdoc">Exclui uma playlist do sistema.</div><div class="ttdef"><b>Definition:</b> driver.cpp:126</div></div>
+<div class="ttc" id="aclassDriver_html_ac7645eea8d3ce2bc39ddbda5e840297a"><div class="ttname"><a href="classDriver.html#ac7645eea8d3ce2bc39ddbda5e840297a">Driver::~Driver</a></div><div class="ttdeci">~Driver()</div><div class="ttdoc">Destrutor. Libera a memória alocada para as playlists.</div><div class="ttdef"><b>Definition:</b> driver.cpp:9</div></div>
+<div class="ttc" id="aclassDriver_html_aca0b1e5d1d705a564c1527c70fdfb769"><div class="ttname"><a href="classDriver.html#aca0b1e5d1d705a564c1527c70fdfb769">Driver::setup</a></div><div class="ttdeci">void setup(std::string fileName)</div><div class="ttdoc">Faz a configuração incicial para a lista de música do sistema e as playlists a partir do arquivo.</div><div class="ttdef"><b>Definition:</b> driver.cpp:543</div></div>
+<div class="ttc" id="aclassDriver_html_af0658d103e3e810a8e9ef0a53bb2e261"><div class="ttname"><a href="classDriver.html#af0658d103e3e810a8e9ef0a53bb2e261">Driver::Driver</a></div><div class="ttdeci">Driver()</div><div class="ttdoc">Construtor padrão.</div><div class="ttdef"><b>Definition:</b> driver.cpp:4</div></div>
+<div class="ttc" id="aclassDriver_html_af0e746d27cc6bfc06df6c16be045a484"><div class="ttname"><a href="classDriver.html#af0e746d27cc6bfc06df6c16be045a484">Driver::playlistMenos</a></div><div class="ttdeci">void playlistMenos()</div><div class="ttdoc">Cria uma nova playlist sem uma determinada musica.</div><div class="ttdef"><b>Definition:</b> driver.cpp:725</div></div>
+<div class="ttc" id="aclassDriver_html_af10fd1b24771be5d33ca44617a04b209"><div class="ttname"><a href="classDriver.html#af10fd1b24771be5d33ca44617a04b209">Driver::setFilePath</a></div><div class="ttdeci">void setFilePath(std::string path)</div><div class="ttdoc">Seta o campo filePath para leitura e escrita em arquivo.</div><div class="ttdef"><b>Definition:</b> driver.cpp:569</div></div>
+<div class="ttc" id="aclassDriver_html_af475ff2f77dd62f1f43f9e057b320efb"><div class="ttname"><a href="classDriver.html#af475ff2f77dd62f1f43f9e057b320efb">Driver::listarMusicasDoSistema</a></div><div class="ttdeci">void listarMusicasDoSistema()</div><div class="ttdoc">Lista todas as musicas disponíveis no sistema.</div><div class="ttdef"><b>Definition:</b> driver.cpp:61</div></div>
+<div class="ttc" id="aclassLista_html"><div class="ttname"><a href="classLista.html">Lista</a></div><div class="ttdoc">Classe template que implementa uma lista encadeada.</div><div class="ttdef"><b>Definition:</b> lista.h:16</div></div>
+<div class="ttc" id="aclassMusica_html"><div class="ttname"><a href="classMusica.html">Musica</a></div><div class="ttdoc">Classe que representa uma música.</div><div class="ttdef"><b>Definition:</b> musica.h:13</div></div>
+<div class="ttc" id="aclassPlaylist_html"><div class="ttname"><a href="classPlaylist.html">Playlist</a></div><div class="ttdoc">Uma classe que representa uma playlist.</div><div class="ttdef"><b>Definition:</b> playlist.h:15</div></div>
+<div class="ttc" id="alista_8h_html"><div class="ttname"><a href="lista_8h.html">lista.h</a></div></div>
+<div class="ttc" id="amusica_8h_html"><div class="ttname"><a href="musica_8h.html">musica.h</a></div></div>
+<div class="ttc" id="aplaylist_8h_html"><div class="ttname"><a href="playlist_8h.html">playlist.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

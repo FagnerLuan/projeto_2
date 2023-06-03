@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['_7elista_0',['~Lista',['../classLista.html#a37d07dd9b2e41f9779a280c8632f46bd',1,'Lista']]],
-  ['_7emusica_1',['~Musica',['../classMusica.html#aebcf7c6bd83ea83d172be34e2fd550f2',1,'Musica']]],
-  ['_7eno_2',['~No',['../classNo.html#a7c88197a25b288087140cc567711f0ab',1,'No']]],
-  ['_7eplaylist_3',['~Playlist',['../classPlaylist.html#aacd9a69e347fc19a9a0787d7a7ce9df4',1,'Playlist']]]
+  ['save_0',['save',['../classDriver.html#a6d2a540800cd08814fcb216b7e51ecfb',1,'Driver']]],
+  ['setartista_1',['setArtista',['../classMusica.html#a3bf51481d86bb9ca6df915ec1d3bb806',1,'Musica']]],
+  ['setfilepath_2',['setFilePath',['../classDriver.html#af10fd1b24771be5d33ca44617a04b209',1,'Driver']]],
+  ['setnome_3',['setNome',['../classPlaylist.html#aee971f901696a424cddbace5f7f55298',1,'Playlist']]],
+  ['settitulo_4',['setTitulo',['../classMusica.html#aa7ad962a29fcc02ea6a95d5b99e21503',1,'Musica']]],
+  ['setup_5',['setup',['../classDriver.html#aca0b1e5d1d705a564c1527c70fdfb769',1,'Driver']]],
+  ['size_6',['size',['../classLista.html#a5aab435e5d970cf32fc55f4803106e87',1,'Lista']]]
 ];

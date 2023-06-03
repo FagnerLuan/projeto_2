@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['get_0',['get',['../classLista.html#a738f666320254a53892e7cdac4cebee4',1,'Lista']]],
-  ['getartista_1',['getArtista',['../classMusica.html#a4506b21b8403b403cafc75c21b2ee791',1,'Musica']]],
-  ['getcabeca_2',['getCabeca',['../classLista.html#ac711f7d0d980e4413a1c956b75b30755',1,'Lista']]],
-  ['getmusicas_3',['getMusicas',['../classPlaylist.html#aceea9c42ca9de4b9c1e9304ce2ed87a8',1,'Playlist']]],
-  ['getnome_4',['getNome',['../classPlaylist.html#ac700059915a41bc5b4e380c9c6047fd4',1,'Playlist']]],
-  ['gettitulo_5',['getTitulo',['../classMusica.html#a5053b5c176dd510d2fa256aaad379d58',1,'Musica']]]
+  ['lista_0',['Lista',['../classLista.html',1,'Lista&lt; T &gt;'],['../classLista.html#adce924e21607848663132290be1a959d',1,'Lista::Lista()'],['../classLista.html#a9ea43e0462fd99ec7c396f2bbf3cb2bf',1,'Lista::Lista(Lista&lt; T &gt; &amp;lista)']]],
+  ['lista_2eh_1',['lista.h',['../lista_8h.html',1,'']]],
+  ['lista_3c_20musica_20_3e_2',['Lista&lt; Musica &gt;',['../classLista.html',1,'']]],
+  ['lista_3c_20playlist_20_2a_20_3e_3',['Lista&lt; Playlist * &gt;',['../classLista.html',1,'']]],
+  ['listarmusicas_4',['listarMusicas',['../classPlaylist.html#a8ef413f02e8ef19f98b7c4ef8c89b40e',1,'Playlist']]],
+  ['listarmusicasdaplaylist_5',['listarMusicasDaPlaylist',['../classDriver.html#a1c404cfee9c0e70a97c9f533e82a622d',1,'Driver']]],
+  ['listarmusicasdosistema_6',['listarMusicasDoSistema',['../classDriver.html#af475ff2f77dd62f1f43f9e057b320efb',1,'Driver']]]
 ];

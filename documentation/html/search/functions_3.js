@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['desalocarmusicas_0',['desalocarMusicas',['../funcoes_8cpp.html#a53d337506b60cc1090ba784cdd1ddd5b',1,'funcoes.cpp']]],
-  ['desalocarplaylists_1',['desalocarPlaylists',['../funcoes_8h.html#a9b33dc414e92804b165de0582614f339',1,'desalocarPlaylists(Lista&lt; Playlist * &gt; &amp;lista):&#160;funcoes.cpp'],['../funcoes_8cpp.html#a9b33dc414e92804b165de0582614f339',1,'desalocarPlaylists(Lista&lt; Playlist * &gt; &amp;lista):&#160;funcoes.cpp']]]
+  ['diferencaentreplaylists_0',['diferencaEntrePlaylists',['../classDriver.html#a2036973c9b0d5d3573486181079738c0',1,'Driver']]],
+  ['driver_1',['Driver',['../classDriver.html#af0658d103e3e810a8e9ef0a53bb2e261',1,'Driver']]]
 ];

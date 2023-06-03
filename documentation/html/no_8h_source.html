@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>simple song player: Código-Fonte de include/no.h</title>
+<title>playlist_manager: Código-Fonte de include/no.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">simple song player<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">playlist_manager<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">projeto 1 da disciplina de LP 1 do BTI.</div>
   </td>
  </tr>
  </tbody>
@@ -88,19 +87,24 @@ $(function() {
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classNo.html#af09cabc7f7210519649492758c374845">   16</a></span>    T <a class="code hl_variable" href="classNo.html#af09cabc7f7210519649492758c374845">dado</a>; </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classNo.html#a179d511f4e7717c887aba671287d5c59">   17</a></span>    <a class="code hl_class" href="classNo.html">No</a>* <a class="code hl_variable" href="classNo.html#a179d511f4e7717c887aba671287d5c59">proximo</a>; </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classNo.html#a3406ad7685cb45b3c1ad3039686fbcb0">   23</a></span>    <a class="code hl_function" href="classNo.html#a3406ad7685cb45b3c1ad3039686fbcb0">No</a>(T <a class="code hl_variable" href="classNo.html#af09cabc7f7210519649492758c374845">dado</a>) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    this-&gt;dado = <a class="code hl_variable" href="classNo.html#af09cabc7f7210519649492758c374845">dado</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    this-&gt;proximo = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classNo.html#a7c88197a25b288087140cc567711f0ab">   30</a></span>    <a class="code hl_function" href="classNo.html#a7c88197a25b288087140cc567711f0ab">~No</a>() {}</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        this-&gt;dado = <a class="code hl_variable" href="classNo.html#af09cabc7f7210519649492758c374845">dado</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        this-&gt;proximo = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classNo.html#aa81f94748cb567f43cb5ecf65cafe833">   30</a></span>    <a class="code hl_function" href="classNo.html#aa81f94748cb567f43cb5ecf65cafe833">No</a>() {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        this-&gt;proximo = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassNo_html"><div class="ttname"><a href="classNo.html">No</a></div><div class="ttdoc">Classe template para ser um no de uma lista ligada.</div><div class="ttdef"><b>Definition:</b> <a href="no_8h_source.html#l00014">no.h:14</a></div></div>
-<div class="ttc" id="aclassNo_html_a179d511f4e7717c887aba671287d5c59"><div class="ttname"><a href="classNo.html#a179d511f4e7717c887aba671287d5c59">No::proximo</a></div><div class="ttdeci">No * proximo</div><div class="ttdef"><b>Definition:</b> <a href="no_8h_source.html#l00017">no.h:17</a></div></div>
-<div class="ttc" id="aclassNo_html_a3406ad7685cb45b3c1ad3039686fbcb0"><div class="ttname"><a href="classNo.html#a3406ad7685cb45b3c1ad3039686fbcb0">No::No</a></div><div class="ttdeci">No(T dado)</div><div class="ttdoc">Construtor que recebe o valor a ser armazenado.</div><div class="ttdef"><b>Definition:</b> <a href="no_8h_source.html#l00023">no.h:23</a></div></div>
-<div class="ttc" id="aclassNo_html_a7c88197a25b288087140cc567711f0ab"><div class="ttname"><a href="classNo.html#a7c88197a25b288087140cc567711f0ab">No::~No</a></div><div class="ttdeci">~No()</div><div class="ttdoc">Destrutor.</div><div class="ttdef"><b>Definition:</b> <a href="no_8h_source.html#l00030">no.h:30</a></div></div>
-<div class="ttc" id="aclassNo_html_af09cabc7f7210519649492758c374845"><div class="ttname"><a href="classNo.html#af09cabc7f7210519649492758c374845">No::dado</a></div><div class="ttdeci">T dado</div><div class="ttdef"><b>Definition:</b> <a href="no_8h_source.html#l00016">no.h:16</a></div></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classNo.html#a7c88197a25b288087140cc567711f0ab">   37</a></span>    <a class="code hl_function" href="classNo.html#a7c88197a25b288087140cc567711f0ab">~No</a>() {}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassNo_html"><div class="ttname"><a href="classNo.html">No</a></div><div class="ttdoc">Classe template para ser um no de uma lista ligada.</div><div class="ttdef"><b>Definition:</b> no.h:14</div></div>
+<div class="ttc" id="aclassNo_html_a179d511f4e7717c887aba671287d5c59"><div class="ttname"><a href="classNo.html#a179d511f4e7717c887aba671287d5c59">No::proximo</a></div><div class="ttdeci">No * proximo</div><div class="ttdef"><b>Definition:</b> no.h:17</div></div>
+<div class="ttc" id="aclassNo_html_a3406ad7685cb45b3c1ad3039686fbcb0"><div class="ttname"><a href="classNo.html#a3406ad7685cb45b3c1ad3039686fbcb0">No::No</a></div><div class="ttdeci">No(T dado)</div><div class="ttdoc">Construtor que recebe o valor a ser armazenado.</div><div class="ttdef"><b>Definition:</b> no.h:23</div></div>
+<div class="ttc" id="aclassNo_html_a7c88197a25b288087140cc567711f0ab"><div class="ttname"><a href="classNo.html#a7c88197a25b288087140cc567711f0ab">No::~No</a></div><div class="ttdeci">~No()</div><div class="ttdoc">Destrutor.</div><div class="ttdef"><b>Definition:</b> no.h:37</div></div>
+<div class="ttc" id="aclassNo_html_aa81f94748cb567f43cb5ecf65cafe833"><div class="ttname"><a href="classNo.html#aa81f94748cb567f43cb5ecf65cafe833">No::No</a></div><div class="ttdeci">No()</div><div class="ttdoc">Construtor que não recebe parametro.</div><div class="ttdef"><b>Definition:</b> no.h:30</div></div>
+<div class="ttc" id="aclassNo_html_af09cabc7f7210519649492758c374845"><div class="ttname"><a href="classNo.html#af09cabc7f7210519649492758c374845">No::dado</a></div><div class="ttdeci">T dado</div><div class="ttdef"><b>Definition:</b> no.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

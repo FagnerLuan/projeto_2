@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>simple song player: Membros de classe - Funções</title>
+<title>playlist_manager: Membros de classe - Funções</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">simple song player<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">playlist_manager<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">projeto 1 da disciplina de LP 1 do BTI.</div>
   </td>
  </tr>
  </tbody>
@@ -73,17 +72,34 @@ $(function() {
 &#160;
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>adicionarMusica()&#160;:&#160;<a class="el" href="classPlaylist.html#a2628a904d245e341387dde543def0e89">Playlist</a></li>
+<li>adicionar()&#160;:&#160;<a class="el" href="classLista.html#ad6b5061161012525fd0a7772f7e3fd39">Lista&lt; T &gt;</a>, <a class="el" href="classPlaylist.html#a33417e4d0c18c4e30c751af9ee381502">Playlist</a></li>
+<li>adicionarMusicaEmPlaylist()&#160;:&#160;<a class="el" href="classDriver.html#a17ea0d470c188b1e3ecb65f196621e55">Driver</a></li>
+<li>adicionarMusicaNaPosicao()&#160;:&#160;<a class="el" href="classPlaylist.html#ac493edb0bfad25a0c0161ea1f493ac97">Playlist</a></li>
 </ul>
 
 
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
 <li>busca()&#160;:&#160;<a class="el" href="classLista.html#abf4739ad3730f2beeeaf8746af4a0f00">Lista&lt; T &gt;</a>, <a class="el" href="classPlaylist.html#aac12cf69225efa52258322609d04989e">Playlist</a></li>
+<li>buscaMusica()&#160;:&#160;<a class="el" href="classDriver.html#a2cde3529e0591ac8f39c0c57fdca4749">Driver</a></li>
+<li>buscaPlaylist()&#160;:&#160;<a class="el" href="classDriver.html#aba107df97b3f0afadef0b5a3f978876d">Driver</a></li>
+</ul>
+
+
+<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>cadastrarMusica()&#160;:&#160;<a class="el" href="classDriver.html#a1c1d97153ecf1920cf6e189a81400627">Driver</a></li>
+<li>cadastrarPlaylist()&#160;:&#160;<a class="el" href="classDriver.html#abab4e8083981b7e5dccf57ed285f9d4c">Driver</a></li>
+</ul>
+
+
+<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>diferencaEntrePlaylists()&#160;:&#160;<a class="el" href="classDriver.html#a2036973c9b0d5d3573486181079738c0">Driver</a></li>
+<li>Driver()&#160;:&#160;<a class="el" href="classDriver.html#af0658d103e3e810a8e9ef0a53bb2e261">Driver</a></li>
 </ul>
 
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
 <li>estaVazia()&#160;:&#160;<a class="el" href="classLista.html#af527a6f74bfa1d1134553bc3b805c79e">Lista&lt; T &gt;</a></li>
+<li>excluirPlaylist()&#160;:&#160;<a class="el" href="classDriver.html#ac6b94c19e679191e1d8063775efd8ba4">Driver</a></li>
 </ul>
 
 
@@ -91,6 +107,7 @@ $(function() {
 <li>get()&#160;:&#160;<a class="el" href="classLista.html#a738f666320254a53892e7cdac4cebee4">Lista&lt; T &gt;</a></li>
 <li>getArtista()&#160;:&#160;<a class="el" href="classMusica.html#a4506b21b8403b403cafc75c21b2ee791">Musica</a></li>
 <li>getCabeca()&#160;:&#160;<a class="el" href="classLista.html#ac711f7d0d980e4413a1c956b75b30755">Lista&lt; T &gt;</a></li>
+<li>getCauda()&#160;:&#160;<a class="el" href="classLista.html#af77a27bde9b537695c62fbd04d5f6e5e">Lista&lt; T &gt;</a></li>
 <li>getMusicas()&#160;:&#160;<a class="el" href="classPlaylist.html#aceea9c42ca9de4b9c1e9304ce2ed87a8">Playlist</a></li>
 <li>getNome()&#160;:&#160;<a class="el" href="classPlaylist.html#ac700059915a41bc5b4e380c9c6047fd4">Playlist</a></li>
 <li>getTitulo()&#160;:&#160;<a class="el" href="classMusica.html#a5053b5c176dd510d2fa256aaad379d58">Musica</a></li>
@@ -98,18 +115,23 @@ $(function() {
 
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
-<li>inserir()&#160;:&#160;<a class="el" href="classLista.html#aef6e2a4149aeb749a0743a05b5fb99e0">Lista&lt; T &gt;</a></li>
+<li>inserir()&#160;:&#160;<a class="el" href="classLista.html#a35bc17dbfd8c60aeb553be9063ff50c6">Lista&lt; T &gt;</a></li>
+<li>inserirNaPosicao()&#160;:&#160;<a class="el" href="classLista.html#ac1a2b02d69ee010207def872e74d4672">Lista&lt; T &gt;</a></li>
 </ul>
 
 
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
 <li>Lista()&#160;:&#160;<a class="el" href="classLista.html#adce924e21607848663132290be1a959d">Lista&lt; T &gt;</a></li>
 <li>listarMusicas()&#160;:&#160;<a class="el" href="classPlaylist.html#a8ef413f02e8ef19f98b7c4ef8c89b40e">Playlist</a></li>
+<li>listarMusicasDaPlaylist()&#160;:&#160;<a class="el" href="classDriver.html#a1c404cfee9c0e70a97c9f533e82a622d">Driver</a></li>
+<li>listarMusicasDoSistema()&#160;:&#160;<a class="el" href="classDriver.html#af475ff2f77dd62f1f43f9e057b320efb">Driver</a></li>
 </ul>
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
 <li>mostrarMusicas()&#160;:&#160;<a class="el" href="classPlaylist.html#a2aa029639fa9b686d96ce3551176cfe3">Playlist</a></li>
+<li>mostrarPlaylists()&#160;:&#160;<a class="el" href="classDriver.html#a71452fe971fd8774fcbc5ce8091d9ef7">Driver</a></li>
+<li>moverMusica()&#160;:&#160;<a class="el" href="classDriver.html#aaff950cb77b22dcd91417a5d052a1851">Driver</a></li>
 <li>Musica()&#160;:&#160;<a class="el" href="classMusica.html#ab74ae45fdf76b65cb55111e8b155774f">Musica</a></li>
 </ul>
 
@@ -119,28 +141,56 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
+<li>operator!=()&#160;:&#160;<a class="el" href="classMusica.html#a680b06d22aefb6230efe8ff70acb0542">Musica</a></li>
+<li>operator+()&#160;:&#160;<a class="el" href="classLista.html#ac32e127a959596c59a55c579e5f210b2">Lista&lt; T &gt;</a>, <a class="el" href="classPlaylist.html#a8e1b3f7e3e4c57358ae24b880e3f2de0">Playlist</a></li>
+<li>operator-()&#160;:&#160;<a class="el" href="classPlaylist.html#a13898a95ee3737c946665c551d4cb84e">Playlist</a></li>
+<li>operator&lt;&lt;()&#160;:&#160;<a class="el" href="classLista.html#ac967fb692d17024cbb37f2de4aa5e52c">Lista&lt; T &gt;</a>, <a class="el" href="classPlaylist.html#ac68b742a49475a26f503f1e5f7362a15">Playlist</a></li>
+<li>operator==()&#160;:&#160;<a class="el" href="classMusica.html#a3bbb779c1770d916ad8bdd8387e75d52">Musica</a>, <a class="el" href="classPlaylist.html#a568379f99981878cb1bade9b8d3066f1">Playlist</a></li>
+<li>operator&gt;&gt;()&#160;:&#160;<a class="el" href="classLista.html#a99e8c74d708efb8eaf7b3bc7fd85a19e">Lista&lt; T &gt;</a>, <a class="el" href="classPlaylist.html#a2b56e7357f8d231fe5e57f72ee4899ac">Playlist</a></li>
+</ul>
+
+
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
 <li>Playlist()&#160;:&#160;<a class="el" href="classPlaylist.html#af66f530866f4371706f2fbd95147b82e">Playlist</a></li>
+<li>playlistComMusicaNoFim()&#160;:&#160;<a class="el" href="classDriver.html#a74f36cda9af41ba3d3c0149e38e3878c">Driver</a></li>
+<li>playlistMenos()&#160;:&#160;<a class="el" href="classDriver.html#af0e746d27cc6bfc06df6c16be045a484">Driver</a></li>
 <li>proximaATocar()&#160;:&#160;<a class="el" href="classPlaylist.html#ad9afa13755e02b848bc5521af8121cbf">Playlist</a></li>
 </ul>
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
-<li>remover()&#160;:&#160;<a class="el" href="classLista.html#ab7385c3496bb8f72b2540d7ce14ac71c">Lista&lt; T &gt;</a></li>
-<li>removerMusica()&#160;:&#160;<a class="el" href="classPlaylist.html#a2a3fb996d94b7c6dd44b3f7d184c87f7">Playlist</a></li>
+<li>remover()&#160;:&#160;<a class="el" href="classLista.html#ab7385c3496bb8f72b2540d7ce14ac71c">Lista&lt; T &gt;</a>, <a class="el" href="classPlaylist.html#a6ad334e01f3aa4496a2614e035bc7723">Playlist</a></li>
+<li>removerDoSistema()&#160;:&#160;<a class="el" href="classDriver.html#a4f03780ae30a62f5c93d2fe7e40cceb3">Driver</a></li>
+<li>removerMusicaDaPlaylist()&#160;:&#160;<a class="el" href="classDriver.html#a47283e6cc7633b91171900e7ad2ed097">Driver</a></li>
+<li>reproduzirPlaylist()&#160;:&#160;<a class="el" href="classDriver.html#a4a39adf711551a61df615d7e927a2398">Driver</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>save()&#160;:&#160;<a class="el" href="classDriver.html#a6d2a540800cd08814fcb216b7e51ecfb">Driver</a></li>
 <li>setArtista()&#160;:&#160;<a class="el" href="classMusica.html#a3bf51481d86bb9ca6df915ec1d3bb806">Musica</a></li>
+<li>setFilePath()&#160;:&#160;<a class="el" href="classDriver.html#af10fd1b24771be5d33ca44617a04b209">Driver</a></li>
 <li>setNome()&#160;:&#160;<a class="el" href="classPlaylist.html#aee971f901696a424cddbace5f7f55298">Playlist</a></li>
 <li>setTitulo()&#160;:&#160;<a class="el" href="classMusica.html#aa7ad962a29fcc02ea6a95d5b99e21503">Musica</a></li>
+<li>setup()&#160;:&#160;<a class="el" href="classDriver.html#aca0b1e5d1d705a564c1527c70fdfb769">Driver</a></li>
 <li>size()&#160;:&#160;<a class="el" href="classLista.html#a5aab435e5d970cf32fc55f4803106e87">Lista&lt; T &gt;</a></li>
 </ul>
 
 
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>toPointer()&#160;:&#160;<a class="el" href="classPlaylist.html#ab493e048e8cc20a198d28b1c372ac66d">Playlist</a></li>
+</ul>
+
+
+<h3><a id="index_u" name="index_u"></a>- u -</h3><ul>
+<li>unirPlaylists()&#160;:&#160;<a class="el" href="classDriver.html#a387dd3dbddc781b0d492860cd506fc29">Driver</a></li>
+</ul>
+
+
 <h3><a id="index__7E" name="index__7E"></a>- ~ -</h3><ul>
-<li>~Lista()&#160;:&#160;<a class="el" href="classLista.html#a37d07dd9b2e41f9779a280c8632f46bd">Lista&lt; T &gt;</a></li>
+<li>~Driver()&#160;:&#160;<a class="el" href="classDriver.html#ac7645eea8d3ce2bc39ddbda5e840297a">Driver</a></li>
+<li>~Lista()&#160;:&#160;<a class="el" href="classLista.html#af297975e278b0c92cbf67d14b2f08366">Lista&lt; T &gt;</a></li>
 <li>~Musica()&#160;:&#160;<a class="el" href="classMusica.html#aebcf7c6bd83ea83d172be34e2fd550f2">Musica</a></li>
 <li>~No()&#160;:&#160;<a class="el" href="classNo.html#a7c88197a25b288087140cc567711f0ab">No&lt; T &gt;</a></li>
 <li>~Playlist()&#160;:&#160;<a class="el" href="classPlaylist.html#aacd9a69e347fc19a9a0787d7a7ce9df4">Playlist</a></li>

@@ -1,15 +1,10 @@
 var searchData=
 [
-  ['main_0',['main',['../CMakeCXXCompilerId_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../____main_____8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;__main__.cpp'],['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['main_2ecpp_2eo_2ed_2',['main.cpp.o.d',['../main_8cpp_8o_8d.html',1,'']]],
-  ['menu_2ecpp_2eo_2ed_3',['menu.cpp.o.d',['../menu_8cpp_8o_8d.html',1,'']]],
-  ['menudasplaylists_4',['menuDasPlaylists',['../funcoes_8cpp.html#a4c16cbba4f0d2de732f25e4df119999f',1,'menuDasPlaylists():&#160;funcoes.cpp'],['../funcoes_8h.html#a4c16cbba4f0d2de732f25e4df119999f',1,'menuDasPlaylists():&#160;funcoes.cpp']]],
-  ['menudosistema_5',['menuDoSistema',['../funcoes_8cpp.html#a3b73b4628f16447367f33e773086e275',1,'menuDoSistema():&#160;funcoes.cpp'],['../funcoes_8h.html#a3b73b4628f16447367f33e773086e275',1,'menuDoSistema():&#160;funcoes.cpp']]],
-  ['mostrarmusicas_6',['mostrarMusicas',['../classPlaylist.html#a2aa029639fa9b686d96ce3551176cfe3',1,'Playlist']]],
-  ['movermusica_7',['moverMusica',['../funcoes_8cpp.html#a1347051431bc344fce4eb50ba16e817d',1,'moverMusica(Lista&lt; Playlist * &gt; &amp;lista, int origem, int destino, int indiceDaMusica):&#160;funcoes.cpp'],['../funcoes_8h.html#a1347051431bc344fce4eb50ba16e817d',1,'moverMusica(Lista&lt; Playlist * &gt; &amp;lista, int origem, int destino, int indiceDaMusica):&#160;funcoes.cpp']]],
-  ['musica_8',['Musica',['../classMusica.html#a435c4de75bd638108bf9caae58000e18',1,'Musica::Musica()'],['../classMusica.html#ab74ae45fdf76b65cb55111e8b155774f',1,'Musica::Musica(std::string titulo, std::string artista)'],['../classMusica.html',1,'Musica']]],
-  ['musica_2ecpp_9',['musica.cpp',['../musica_8cpp.html',1,'']]],
-  ['musica_2ecpp_2eo_2ed_10',['musica.cpp.o.d',['../musica_8cpp_8o_8d.html',1,'']]],
-  ['musica_2eh_11',['musica.h',['../musica_8h.html',1,'']]]
+  ['playlist_0',['Playlist',['../classPlaylist.html',1,'Playlist'],['../classPlaylist.html#af66f530866f4371706f2fbd95147b82e',1,'Playlist::Playlist(std::string nome)'],['../classPlaylist.html#aef38d55e42995be147977726350f3ada',1,'Playlist::Playlist()'],['../classPlaylist.html#a308a3eeb5f5d9344c019f4de11d746da',1,'Playlist::Playlist(Playlist &amp;outra)']]],
+  ['playlist_2eh_1',['playlist.h',['../playlist_8h.html',1,'']]],
+  ['playlistcommusicanofim_2',['playlistComMusicaNoFim',['../classDriver.html#a74f36cda9af41ba3d3c0149e38e3878c',1,'Driver']]],
+  ['playlistmenos_3',['playlistMenos',['../classDriver.html#af0e746d27cc6bfc06df6c16be045a484',1,'Driver']]],
+  ['projeto_5f2_4',['projeto_2',['../md_README.html',1,'']]],
+  ['proximaatocar_5',['proximaATocar',['../classPlaylist.html#ad9afa13755e02b848bc5521af8121cbf',1,'Playlist']]],
+  ['proximo_6',['proximo',['../classNo.html#a179d511f4e7717c887aba671287d5c59',1,'No']]]
 ];

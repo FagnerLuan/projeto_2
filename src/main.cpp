@@ -22,6 +22,7 @@ void menu() {
     std::cout << "12 --- Unir Playlists" << std::endl;
     std::cout << "13 --- Adicionar musica no fim da playlist" << std::endl;
     std::cout << "14 --- Diferenca enrtre playlists" << std::endl;
+    std::cout << "15 --- Nova playlist sem uma musica" << std::endl;
 }
 
 int main(int argc, char* argv[]) {
@@ -32,7 +33,7 @@ int main(int argc, char* argv[]) {
 
 
     if (flag) {
-        driver.setup();
+        driver.setup(argv[1]);
     }
 
     while (opcao != 0) {
@@ -110,6 +111,9 @@ int main(int argc, char* argv[]) {
             break;
         case 14:
             driver.diferencaEntrePlaylists();
+            break;
+        case 15:
+            driver.playlistMenos();
             break;
         default:
             std::cout << "Opcao Invalida!" << std::endl;

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['adicionarmusica_0',['adicionarMusica',['../classPlaylist.html#a2628a904d245e341387dde543def0e89',1,'Playlist']]],
-  ['adicionarmusicanaplaylist_1',['adicionarMusicaNaPlaylist',['../funcoes_8h.html#a448ea325a00d25133673bbee48dcee08',1,'adicionarMusicaNaPlaylist(Playlist *playlist, Musica &amp;musica):&#160;funcoes.cpp'],['../funcoes_8cpp.html#a448ea325a00d25133673bbee48dcee08',1,'adicionarMusicaNaPlaylist(Playlist *playlist, Musica &amp;musica):&#160;funcoes.cpp']]],
-  ['adicionarplaylist_2',['adicionarPlaylist',['../funcoes_8h.html#a446667eacc98dbbb4e26b087e8fe0b5b',1,'adicionarPlaylist(Lista&lt; Playlist * &gt; &amp;lista, Playlist *playlist):&#160;funcoes.cpp'],['../funcoes_8cpp.html#a446667eacc98dbbb4e26b087e8fe0b5b',1,'adicionarPlaylist(Lista&lt; Playlist * &gt; &amp;lista, Playlist *playlist):&#160;funcoes.cpp']]],
-  ['architecture_5fid_3',['ARCHITECTURE_ID',['../CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'CMakeCXXCompilerId.cpp']]]
+  ['busca_0',['busca',['../classLista.html#abf4739ad3730f2beeeaf8746af4a0f00',1,'Lista::busca(int index)'],['../classLista.html#a96cce052e5161cb12ff09ecaa09f1dfe',1,'Lista::busca(T elemento)'],['../classPlaylist.html#aac12cf69225efa52258322609d04989e',1,'Playlist::busca(int index)'],['../classPlaylist.html#a901b630545cb86f6d5775cc8151dca14',1,'Playlist::busca(Musica &amp;musica)']]],
+  ['buscamusica_1',['buscaMusica',['../classDriver.html#a2cde3529e0591ac8f39c0c57fdca4749',1,'Driver::buscaMusica(const Musica &amp;musica, Lista&lt; Musica &gt; &amp;musicas)'],['../classDriver.html#a1a3231ad2a094310057efd4653c7f0fe',1,'Driver::buscaMusica(const Musica &amp;musica, Lista&lt; Musica &gt; *musicas)']]],
+  ['buscaplaylist_2',['buscaPlaylist',['../classDriver.html#aba107df97b3f0afadef0b5a3f978876d',1,'Driver']]]
 ];

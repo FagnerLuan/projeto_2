@@ -16,8 +16,9 @@ class Driver {
 private:
     Lista<Musica> sistema; /**< as musicas do sistema*/
     Lista<Playlist*> playlists; /**< as playlists do usuário*/
-    std::ifstream entrada;
-    std::ofstream saida;
+    std::ifstream entrada; /** stream para a leitura de arquivos*/
+    std::ofstream saida; /** stream para a escrita em arquivos*/
+    std::string filePath; /** caminho do aquivo para leitura e escrita*/
 
 public:
     /**
@@ -135,7 +136,13 @@ public:
      * @brief Faz a configuração incicial para a lista de música do sistema e as playlists a partir do arquivo
      * @retval void
     */
-    void setup();
+    void setup(std::string fileName);
+
+    /**
+     * @brief Seta o campo filePath para leitura e escrita em arquivo
+     * @retval void
+    */
+    void setFilePath(std::string path);
 
     /**
      * @brief Salva os dados atuais no arquivo.

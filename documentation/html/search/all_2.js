@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['busca_0',['busca',['../classLista.html#abf4739ad3730f2beeeaf8746af4a0f00',1,'Lista::busca()'],['../classPlaylist.html#aac12cf69225efa52258322609d04989e',1,'Playlist::busca()']]]
+  ['cadastrarmusica_0',['cadastrarMusica',['../classDriver.html#a1c1d97153ecf1920cf6e189a81400627',1,'Driver']]],
+  ['cadastrarplaylist_1',['cadastrarPlaylist',['../classDriver.html#abab4e8083981b7e5dccf57ed285f9d4c',1,'Driver']]]
 ];
